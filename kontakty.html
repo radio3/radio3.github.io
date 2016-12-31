@@ -28,31 +28,26 @@ margin:0px auto;
 <br>
 <center><font size="+4">Контакты</font></center> 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Простейшая и крутейшая форма</title>
-</head>
-<body>
-<div id="container">
-<form class="mainform" >
-<p class="name">
-<input type="text" name="name" value="Имя автора" />
-<label for="name">Имя</label>
-</p>
- 
-<p class="email">
-<input type="text" name="email" value="name@example.com" />
-<label for="email" >E-Mail</label>
-</p>
-<p class="msg">
-<textarea name="msg">Текст сообщения</textarea>
-</p>
-<p class="send" >
-<input type="submit" value="Отправить"  />
-</p>
+<?
+if (isset ($_POST['message'])) {
+$name = @ trim ($_POST['name']);
+$contact = @ trim ($_POST['contact']);
+$message = @ trim ($_POST['message']);
+if (! $name or ! $contact or ! $message) echo ('<p style="color: red">Необходимо заполнить все поля</p>');
+else { mail ("admin@site.ru",
+      "Сообщение с сайта (отправитель: $name)",
+      "$message \n\n Контакты: \n $contact");
+      echo ('<p style="color: green">Ваше сообщение получено, спасибо!</p>');
+      $_POST['name'] = $_POST['contact'] = $_POST['message'] = '';
+}
+}
+?>
+<form method="POST">
+<p>Ваше имя:</p>
+<input name="name" value="<?=@$_POST['name'];?>">
+<p>Контактная информация для связи с вами (icq, e-mail или номер телефона):</p>
+<input name="contact" value="<?=@$_POST['contact'];?>">
+<p>Ваше сообщение:</p>
+<textarea name="message"><?=@$_POST['message'];?></textarea>
+<p><input type="submit" value=" Отправить "></p>
 </form>
-</div>
-</body>
-</html>
