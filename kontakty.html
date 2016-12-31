@@ -28,32 +28,31 @@ margin:0px auto;
 <br>
 <center><font size="+4">Контакты</font></center> 
 
-<form class="contact_form" action="contact-form.php" method="post">
-	<p>
-            <label for="name">Имя:</label>
-            <input type="text"  name="name" placeholder="Введите ваше имя" required />
-        </p>
-        <p>
-            <label for="email">Email:</label>
-            <input type="email" name="email" placeholder="Введите электронный адрес" required />
-            <span class="form_hint">Правильный формат "name@something.com"</span>
-        </p>
-        <p>
-            <label for="tel">Телефон:</label>
-            <input type="tel" name="tel" placeholder="Введите номер телефона" required />
-            <span class="form_hint">Правильный формат "+7-123-4567890"</span>
-        </p>
-        <p>
-            <label for="website">Сайт:</label>
-            <input type="url" name="website" placeholder="Введите адрес вашего сайта" pattern="(http|https)://.+"/>
-            <span class="form_hint">Правильный формат "http://someaddress.com"</span>
-        </p>
-        <p>
-            <label for="message">Текст сообщения:</label>
-            <textarea name="message" cols="40" rows="6" required ></textarea>
-        </p>
-	    <input name="bezspama" type="text" style="display:none" value="" />
-        <p>
-            <button class="submit" type="submit">Отправить сообщение</button>
-        </p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Простейшая и крутейшая форма</title>
+</head>
+<body>
+<div id="container">
+<form class="mainform" >
+<p class="name">
+<input type="text" name="name" value="Имя автора" />
+<label for="name">Имя</label>
+</p>
+ 
+<p class="email">
+<input type="text" name="email" value="name@example.com" />
+<label for="email" >E-Mail</label>
+</p>
+<p class="msg">
+<textarea name="msg">Текст сообщения</textarea>
+</p>
+<p class="send" >
+<input type="submit" value="Отправить"  />
+</p>
 </form>
+</div>
+</body>
+</html>
