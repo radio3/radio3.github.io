@@ -28,26 +28,90 @@ margin:0px auto;
 <br>
 <center><font size="+4">Контакты</font></center> 
 
-<?
-if (isset ($_POST['message'])) {
-$name = @ trim ($_POST['name']);
-$contact = @ trim ($_POST['contact']);
-$message = @ trim ($_POST['message']);
-if (! $name or ! $contact or ! $message) echo ('<p style="color: red">Необходимо заполнить все поля</p>');
-else { mail ("admin@site.ru",
-      "Сообщение с сайта (отправитель: $name)",
-      "$message \n\n Контакты: \n $contact");
-      echo ('<p style="color: green">Ваше сообщение получено, спасибо!</p>');
-      $_POST['name'] = $_POST['contact'] = $_POST['message'] = '';
-}
-}
-?>
-<form method="POST">
-<p>Ваше имя:</p>
-<input name="name" value="<?=@$_POST['name'];?>">
-<p>Контактная информация для связи с вами (icq, e-mail или номер телефона):</p>
-<input name="contact" value="<?=@$_POST['contact'];?>">
-<p>Ваше сообщение:</p>
-<textarea name="message"><?=@$_POST['message'];?></textarea>
-<p><input type="submit" value=" Отправить "></p>
-</form>
+<html>
+<head>
+    <title> Форма обратной связи</title>
+</head>
+<body>
+<body bgcolor=#0000cc MARGINWIDTH=0 MARGINHEIGHT=0 link=#FFFF00 alink=#FFFFFF vlink=#999900>
+<center><form action="http://main-ip.ru/mail.php" method="post">
+<div style="width:400px; text-align:left; border:1px solid #CCCCCC; color:#003300; font:14px tahoma, verdana; background:#F5F5F5;">
+<div style="text-align:center; background:#708090; border:1px solid #F5F5F5; color:#ffffff; padding:5px 5px 5px 5px;">ОБРАТНАЯ СВЯЗЬ</div>
+<div style="border-top:solid 1px #CCCCCC; padding:8px 20px 0px 20px;">Ваше имя:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="name" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="50" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Ваш e-mail:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="e_mail" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="50" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Дата и приблизительное время сна:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="pole_1a" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="999" />
+<input type="hidden" name="pole_1b" value="Дата и приблизительное время сна:" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Место нахождения: </div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="pole_2a" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="999" />
+<input type="hidden" name="pole_2b" value="Место нахождения: " />
+</div>
+<div style="padding:8px 20px 0px 20px;">Дата рождения:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="pole_3a" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="999" />
+<input type="hidden" name="pole_3b" value="Дата рождения:" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Время рождения:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="pole_4a" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="999" />
+<input type="hidden" name="pole_4b" value="Время рождения:" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Место рождения:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="pole_5a" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="999" />
+<input type="hidden" name="pole_5b" value="Место рождения:" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Способ оплаты:</div>
+<div style="padding:1px 20px 0px 20px;">
+<input name="pole_6a" type="text" style="width:358px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="999" />
+<input type="hidden" name="pole_6b" value="Способ оплаты:" />
+</div>
+<div style="padding:8px 20px 0px 20px;">Текст сообщения:</div>
+<div style="padding:1px 20px 0px 20px;">
+<textarea name="text" style="overflow:hidden; width:358px; height:80px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;"></textarea>
+</div>
+<div style="overflow:auto; width:100%;">
+<div style="float:left; padding:10px 0px 10px 20px;">Число на картинке:<br />
+<input name="captcha" type="text" style="width:220px; height:20px; background:#FFFFFF; border:1px solid #CCCCCC; color:#191970;" maxlength="5" />
+</div>
+<div style="float:right; padding:10px 20px 10px 0px;">
+<a href="http://main-ip.ru"><img border="0" src="http://main-ip.ru/captcha.php" /></a>
+</div>
+</div>
+<div style="padding:5px 20px 15px 20px; text-align:center;">
+<input type="submit" value="Отправить" style="cursor:pointer; width:200px; height:35px; font:15px tahoma;" />
+</div>
+</div></form></center>
+
+<br><center><a href="http://delfa9.narod.ru" title="Главная"> <img src="http://delfa9.narod.ru/Kartinki/dom.gif" alt="Главная" /></a>  </center>
+<br><center><a href="mailto:zerkalo52@ya.ru" title=" E-mail: zerkalo52@ya.ru"> <img src="http://delfa9.narod.ru/Kartinki/pis.gif" alt="E-mail: zerkalo52@ya.ru" /></a> </center>
+
+
+<BR><CENTER><IMG SRC=http://www.narod.ru/counter.xhtml></CENTER><BR>
+<!-- copyright (i3) --><div align="center"><a href="http://www.ucoz.ru/" title="Создать сайт бесплатно"><img style="margin:0;padding:0;border:0;" alt="Hosted by uCoz" src="http://s205.ucoz.net/img/cp/7.gif" width="80" height="15" title="Hosted by uCoz" /></a><br /></div><!-- /copyright -->
+</body>
+</html>
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=210827&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/210827/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:210827,type:0,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+try { var yaCounter210827 = new Ya.Metrika({id:210827,
+          clickmap:true, webvisor:true});}
+catch(e) { }
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/210827" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
