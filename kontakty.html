@@ -1,9 +1,12 @@
 
-
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>НАВАЙЯ-FM</title>
+<title>xiper.net - пример фиксированного блока с меняющимся отступом</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<link href="http://www.xiper.net/examples/css/examples.css" rel="stylesheet" type="text/css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
@@ -11,7 +14,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
 
-Радио Навайя! Мы всегда с тобой! 
+/* функция кроссбраузерного определения отступа от верха документа к текущей позиции скроллера прокрутки */
 function getScrollTop() {
            var scrOfY = 0;
            if( typeof( window.pageYOffset ) == "number" ) {
@@ -47,6 +50,7 @@ function fixPaneRefresh(){
 
 
 
+
 </script>
 
 
@@ -68,7 +72,7 @@ function fixPaneRefresh(){
 #fixedBox {
 	font-size: 16px;
 	text-align: center;
-	border-top: 1px solid #FFF;
+	border-top: 1px solid #539127;
 	border-bottom: 1px solid #539127;
 	height: 30px;
 	line-height: 30px;
@@ -85,8 +89,7 @@ function fixPaneRefresh(){
 
 <body>
 <div class="main">
-	<div class="header">
-		Выборы-Выборы! Кандидаты? Пи-пи-пи!...
+	<div class="header">	
 		<div id="fixedBox">
 			Какой-то очень важный блок, который все время нужно видеть (прокртути экран вниз).
 		</div>
