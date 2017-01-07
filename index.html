@@ -1,3 +1,13 @@
+$(window).bind('scroll', function() {
+   if ($(window).scrollTop() < 333) {
+      $('<a href="#link">Текст для перехода </a>.menu').addClass('fixed');
+   }
+   else
+   {
+      $('<a href="#link">Текст для перехода </a>.menu').removeClass('fixed');
+   }
+});
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +31,7 @@ margin:0px auto;
 <center>  <font size="+4"><font face="Monotype Corsiva">Радио "Навайя" </font></font></center>
 <center><i>Радио для настоящих эстетов!</i></center>  
 <br>
-<a href="#link">Текст для перехода </a>
+
 <br>
 <center>  ГЛАВНАЯ НОВОСТИ РАСПИСАНИЕ СТАТЬИ ВИДЕО КОНТАКТЫ </center>
 <br>
