@@ -308,3 +308,8 @@ pageTracker._trackPageview();
 </html>
 <br>
 <br>
+<span> <a href="#" title="скрытый текст" onclick=" obj=this.parentNode.childNodes[1].style; 
+tmp=(obj.display!='block') ? 'block' : 'none'; 
+obj.display=tmp; 
+return false;"> Скрытый текст</a> <div class="subblock" style="display: none"> 
+<span style="color: blue;"> Здесь у нас скрытый текст, который работает без JavaScript. Для того, чтобы понять, как он работает, читайте далее на странице: </span> </div> </span> 
