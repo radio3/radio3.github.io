@@ -373,3 +373,47 @@ pageTracker._trackPageview();
 <br>
 <br>
 <br>	
+<html>
+<head>
+    <script language="JavaScript" src="../js/jquery.min.js"></script>
+</head>   
+<script>
+    $(function(){
+        if($('#ta').length){
+            blok_height = Number($('#ta').css('height').replace('px',''));
+              
+            if(blok_height > 80){
+               $('#ta').css('max-height','80px');
+               $('.read-next').show(); 
+            }
+       }
+    });
+     
+    $('.read-next').live('click', function(){
+         
+        if($('#ta').css('max-height') != 'none'){
+           $('#ta').css('max-height','');
+           $(this).text('Скрыть');
+        } else {
+           $('#ta').css('max-height','80px');    
+           $(this).text('Читать далее...');
+        }
+         
+        return false;
+    });
+</script>
+<body>
+    <div style="height:'100%'">
+        <div id="ta" style="overflow:hidden">
+            Ребята! Очень надеюсь на Вашу помощь!                                 <br />
+Действие фильма разворачивается в альтернативном будущем, в мире после апокалипсиса.<br />
+		В городе, где живут главные герои братья Ли царит хаос и беспредел. <br />
+		Город находится под властью банд, которые не считаются с законом и не ведают страха и управы. <br />
+		Когда бандиты убивают друга и учителя братьев Ли, те решают бросить вызов всем преступникам их города. <br />
+		Для этого они объединяются с демоном Кого Суко, который хочет найти вторую половину магического талисмана под названием «двойной дракон». <br />
+		Братья Ли и Кого Суко отправляются в дальний путь, полный опасности.     <br />
+        </div>       
+        <a class="read-next" style="display:none;" href="#">Читать далее...</a>
+    </div>
+</body>
+</html>
