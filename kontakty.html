@@ -308,12 +308,63 @@ pageTracker._trackPageview();
 </html>
 <br>
 <br>
-<html><body><span> <a href="#" title="скрытый текст" onclick=" obj=this.parentNode.childNodes[1].style; 
-tmp=(obj.display!='block') ? 'block' : 'none'; 
-obj.display=tmp; 
-return false;"> Скрытый текст</a> <div class="subblock" style="display: none"> 
-<span style="color: blue;"> Здесь у нас скрытый текст, который работает без JavaScript. Для того, чтобы понять, как он работает, читайте далее на странице: </span> </div> </span> 
-</body></html>
+<html>
+<head>
+    <script language="JavaScript" src="../js/jquery.min.js"></script>
+</head>   
+<script>
+    $(function(){
+        if($('#ta').length){
+            blok_height = Number($('#ta').css('height').replace('px',''));
+              
+            if(blok_height > 80){
+               $('#ta').css('max-height','80px');
+               $('.read-next').show(); 
+            }
+       }
+    });
+     
+    $('.read-next').live('click', function(){
+         
+        if($('#ta').css('max-height') != 'none'){
+           $('#ta').css('max-height','');
+           $(this).text('Скрыть');
+        } else {
+           $('#ta').css('max-height','80px');    
+           $(this).text('Читать далее...');
+        }
+         
+        return false;
+    });
+</script>
+<body>
+    <div style="height:'100%'">
+        <div id="ta" style="overflow:hidden">
+            Ребята! Очень надеюсь на Вашу помощь!                                 <br />
+Имеется большой кусок текста с html-тегами. Как сделать так,                      <br />
+чтоб была видна только его верхняя часть (в пределах 80px),                       <br />
+а остальная часть появлялась при нажатии на                                       <br />
+ кнопку "Ч                                                                        <br />
+итать далее..." (без перезагрузки страницы).                                      <br />
+Находил несколько решений, но к сожалению не                                      <br />
+одно из них не подошло,                                                           <br />
+т.к. во всех этих решениях предполагает                                           <br />
+                                                                                  <br />
+ся наличие двух частей - то что должно б                                          <br />
+ыть отображено и то, что должно быть скрыто.                                      <br />
+Самый подходящий вариант который был найден выглядет следующим образом:           <br />
+                                                                                  <br />
+Можно ли в этом примере сделать чтобы "Читать далее" Н                            <br />
+е отображалась если текст помещается в 80px, а также если он уже был раскрыт?     <br />
+И самое главное как сделать автоуменьшение блока, если                            <br />
+ текст занимает меньше чем 80px?                                                  <br />
+Возможно это уже здесь где-то обсуждалось, но я к сожалению не смог найти...      <br />
+        </div>       
+        <a class="read-next" style="display:none;" href="#">Читать далее...</a>
+    </div>
+</body>
+</html>
+
 <br>
 <br>
 <br>
