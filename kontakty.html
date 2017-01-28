@@ -307,7 +307,12 @@ pageTracker._trackPageview();
 </html>
 <br>
 <br>
-<html>	
+<html>
+function show_hide(obj_id) {
+doc=document.getElementById(obj_id);
+if(doc.style.display == "none") doc.style.display = "block";
+else doc.style.display = "none"
+}	
 <a onclick="show_hide('detail1'); return false;" href="javascript:void(0)">Всегда ли это будет работать?</a>
 <div id="detail1" style="display: none;">Будет работать, если пользователь в своём браузере сознательно не отключил использование джаваскриптов. Все современные темы Wodpress с галереями и эффектами работают не без помощи JavaScript. Да и многие современные сайты используют эту технологию.</div>
 <a onclick="show_hide('detail2'); return false;" href="javascript:void(0)">Посмотреть розового слоника</a>
