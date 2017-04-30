@@ -1,136 +1,103 @@
-#slider { /*положение слайдера*/
-    position: relative;
-	text-align: center;
-    top: 10px;
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/*Copyright www.Master-CSS.com*/ .my-logo{position:fixed;bottom:0;left:0;margin:0;padding:0;}.my-logo__pic{border:0;vertical-align:middle;width:50px;height:50px;}
+
+body{
+  font: 1em/1.6em sans-serif;
+  color: #353535;
 }
 
-#slider{ /*центровка слайдера*/
-	margin: 0 auto;
+a{
+  text-decoration: none;
 }
 
-#slides article{ /*все изображения справа друг от доруга*/
-	width: 20%;
-	float: left;
+/*Адаптивность картинок и видео*/
+img{
+  max-width: 100%;
+  height: auto;
 }
 
-#slides .image{ /*устанавливает общий размер блока с изображениями*/
-	width: 500%;
-	line-height: 0;
+.vidres{
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 
-#overflow{ /*сркывает все, что находится за пределами этого блока*/
-	width: 100%;
-	overflow: hidden;
+.vidres iframe, .vidres embed, .vidres object{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-article img{ /*размер изображений слайдера*/
-	width: 100%;
+/*Используется для центрирования контента*/
+.mid{
+  max-width: 1170px; /*Укажите своё значение*/
+  margin: 0 auto;
 }
 
-#desktop:checked ~ #slider{ /*размер всего слайдера*/
-	max-width: 960px; /*максимальнная длинна*/
+/*Колонки - задаём свои, если чего то не хватает
+  по умолчанию используется расстояние в 4% между колонками*/
+.col25, .col33, .col50{
+  float: left;
+  margin: 0 4% 0 0;
 }
 
-/*настройка переключения и положения для левой стрелки*/
-/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
-#switch1:checked ~ #controls label:nth-child(5), 
-#switch2:checked ~ #controls label:nth-child(1),
-#switch3:checked ~ #controls label:nth-child(2),
-#switch4:checked ~ #controls label:nth-child(3),
-#switch5:checked ~ #controls label:nth-child(4){
-	background: url('prev.png') no-repeat; /*заливка фона картинкой без повторений*/
-	float: left;
-	margin: 0 0 0 -84px; /*сдвиг влево*/
-	display: block;
-	height: 68px;
-	width: 68px;
+.col25{ /*4 в ряд*/
+  width: 22%;
 }
 
-/*настройка переключения и положения для правой стрелки*/
-#switch1:checked ~ #controls label:nth-child(2), 
-#switch2:checked ~ #controls label:nth-child(3),
-#switch3:checked ~ #controls label:nth-child(4),
-#switch4:checked ~ #controls label:nth-child(5),
-#switch5:checked ~ #controls label:nth-child(1){
-	background: url('next.png') no-repeat; /*заливка фона картинкой без повторений*/
-	float: right;
-	margin: 0 -84px 0 0; /*сдвиг вправо*/
-	display: block;
-	height: 68px;
-	width: 68px;
+.col33{ /*3 в ряд*/
+  width: 30.6666666%;
 }
 
-label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
-	cursor: pointer;
+.col50{ /*2 в ряд*/
+  width: 48%;
 }
 
-.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
-	display: none;
+.col25:last-child,
+.col33:last-child,
+.col50:last-child{
+  margin: 0;
 }
 
-/*позиция изображения при активации переключателя*/
-#switch1:checked ~ #slides .image{
-	margin-left: 0;
+/*Очистка обтекания*/
+.mid:before, .cf:before, .mid:after, .cf:after{
+  content: " ";
+  display: table;
+}
+.mid:after, .cf:after{
+  clear: both;
 }
 
-#switch2:checked ~ #slides .image{
-	margin-left: -100%;
+/*Адаптивность*/
+@media screen and (max-width: 1200px){
+  .mid{
+    margin: 0 40px;
+  }
 }
 
-#switch3:checked ~ #slides .image{
-	margin-left: -200%;
+@media screen and (max-width: 980px){
+  .col25{
+    width: 50%;
+  }
+  .col25:nth-child(even){
+    margin: 0;
+  }
 }
 
-#switch4:checked ~ #slides .image{
-	margin-left: -300%;
+@media screen and (max-width: 768px){
+  .mid{
+    margin: 0 20px;
+  }
+  .col25, .col33, .col50{
+    width: 100%;
+    margin: 0;
+  }
 }
 
-#switch5:checked ~ #slides .image{
-	margin-left: -400%;
-}
+@media screen and (max-width: 480px){
 
-#controls{ /*положение блока всех управляющих элементов*/
-	margin: -25% 0 0 0;
-	width: 100%;
-	height: 50px;
-}
-
-#active label{ /*стиль отдельного переключателя*/
-	border-radius: 10px; /*скругление углов*/
-	display: inline-block; /*расположение в строку*/
-	width: 15px;
-	height: 15px;
-	background: #bbb;
-}
-
-#active{ /*расположение блока с переключателями*/
-	margin: 23% 0 0;
-	text-align: center;
-}
-
-#active label:hover{ /*поведение чекбокса при наведении*/
-	background: #76c8ff;
-	border-color: #777 !important; /*выполнение в любом случае*/
-}
-
-/*цвет активного лейбла при активации чекбокса*/
-#switch1:checked ~ #active label:nth-child(1),
-#switch2:checked ~ #active label:nth-child(2),
-#switch3:checked ~ #active label:nth-child(3),
-#switch4:checked ~ #active label:nth-child(4),
-#switch5:checked ~ #active label:nth-child(5){
-	background: #18a3dd;
-	border-color: #18a3dd !important;
-}
-
-#slides .image{ /*анимация пролистывания изображений*/
-	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-#controls label:hover{ /*прозрачность стрелок при наведении*/
-	opacity: 0.6;
-}
-
-#controls label{ /*прозрачность стрелок при отводе курсора*/
-	transition: opacity 0.2s ease-out;
 }
