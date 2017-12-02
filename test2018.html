@@ -1,63 +1,79 @@
-<div id="header">
-	    <div id="navigation">
-	        <ul id="menu">
-	            <li><a href="">Сумки</a></li>
-	            <li><a href="">Обувь</a></li>
-	            <li><a href="">Шарфы</a></li>
-	            <li><a href="">Одежда</a></li>
-	            <li><a href="">Аксессуары</a></li>
-	        </ul>
-	    </div>
-	</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Фиксированное меню для сайта</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<style>
+body {
+    margin: 0;
+    height: 3000px;
+    background: linear-gradient(-45deg, #CFCFCF, #555);
+}
 #header {
-	    height: 180px;
-	}
-	#navigation{
-	    background: #EF0505;
-	    height: 40px;
-	    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-	    font-size: 16px;
-	    line-height: 40px;
-	    position: relative;
-	    top: 140px;
-	}
-	#navigation.fixed{
-	    position: fixed;
-	    top: 0;
-	    width: 100%;
-	    background: rgba(239, 5, 5, 0.95);
-	}
-	#navigation ul{
-	    width: 1180px;
-	    padding-left: 0;
-	    margin: 0 auto;
-	    display: block;
-	}
-	#menu li{
-	    float: left;
-	    list-style: none;
-	    padding: 0 25px;
-	    border-right: 1px solid #D60000;
-	}
-	#menu a {
-	    color: #fff;
-	    text-decoration: none;
-	    font-family: Verdana;
-	}
-	#menu>li a:hover{
-	    color: #656565;
-	    transition: color 0.5s ease;
-	}
-jQuery(function($) {
-	        $(window).scroll(function(){
-	            if($(this).scrollTop()>140){
-	                $('#navigation').addClass('fixed');
-	            }
-	            else if ($(this).scrollTop()<140){
-	                $('#navigation').removeClass('fixed');
-	            }
-	        });
-	    });
-<script type="text/javascript">var $ = jQuery.noConflict();var h_hght=100;var h_mrg=0;jQuery(function(){jQuery(window).scroll(function(){var top=jQuery(this).scrollTop();var elem=jQuery('#top-menu');if(top+h_mrg<h_hght){elem.css('top',(h_hght-top
-));elem.removeClass('fix')}else{elem.css('top',h_mrg);elem.addClass('fix'
-)}})});</script> 
+    height: 180px;
+}
+#navigation{
+	background: #EF0505;
+	height: 40px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	font-size: 16px;
+	line-height: 40px;
+    position: relative;
+    top: 140px;
+}
+#navigation.fixed{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(239, 5, 5, 0.95);
+}
+#navigation ul{
+    width: 1180px;
+	padding-left: 0;
+	margin: 0 auto;
+    display: block;
+}
+#menu li{
+	float: left;
+	list-style: none;
+	padding: 0 25px;
+	border-right: 1px solid #D60000;
+}
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Verdana;
+}
+#menu>li a:hover{
+	color: #656565;
+	transition: color 0.5s ease;
+}
+</style>
+<script>
+	jQuery(function($) {
+		$(window).scroll(function(){
+			if($(this).scrollTop()>140){
+				$('#navigation').addClass('fixed');
+			}
+			else if ($(this).scrollTop()<140){
+				$('#navigation').removeClass('fixed');
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<div id="header">
+    <div id="navigation">
+        <ul id="menu">
+            <li><a href="">Сумки</a></li>
+            <li><a href="">Обувь</a></li>
+            <li><a href="">Шарфы</a></li>
+            <li><a href="">Одежда</a></li>
+            <li><a href="">Аксессуары</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
