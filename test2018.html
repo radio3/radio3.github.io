@@ -10,7 +10,7 @@
 <style>
 body {
     margin: 0;
-    height: 600px;
+    height: 3000px;
     background: linear-gradient(-45deg, #CFCFCF, #555);
 }
 #header {
@@ -57,10 +57,10 @@ text-align: center;
 <script>
 	jQuery(function($) {
 		$(window).scroll(function(){
-			if($(this).scrollTop()>40){
+			if($(this).scrollTop()>140){
 				$('#navigation').addClass('fixed');
 			}
-			else if ($(this).scrollTop()<40){
+			else if ($(this).scrollTop()<140){
 				$('#navigation').removeClass('fixed');
 			}
 		});
