@@ -1,148 +1,340 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Архив лекций Мадана Мохана Прабху</title>
-    <link href="/Content/css?v=i57hxuwxOTlJRuZPLMKQiJjhm0TpKKotHBZN9u3wy9U1" rel="stylesheet"/>
+    <head>
+        <meta charset="utf-8"><title>Филипп Любовь Витальевна</title><meta name="description" content="Социальная карта Подмосковья, заполняя которую, мы сможем составить реальную, а не вымышленную картину жизни региона, чтобы не только выявлять социальные проблемы, но и решать их."><meta name="keywords" content="социальная карта подмосковья, филипп, любовь, витальевна, щелково, ивантеевка, звездный городок, чкаловский, ногинск, монино"><link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon" /><link rel="apple-touch-icon" href="/images/favicon.png"><noscript><meta http-equiv="refresh" content="0; url=/xtables-info/show/eyJjb250ZW50IjoxMH0="></noscript><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.min.css"><script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script><script src="/js/xtables.js" type="text/javascript"></script><script src="/js/bootstrap.js" type="text/javascript"></script>    </head>
+    <body>
+        <style>
+    body {
+        padding-top: 0
+    }
+</style>
+<div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; z-index: 11111" onclick="location.href='/xtables-login'"></div>
+<nav class="navbar navbar-default navbar-custom">
+    <div class="container" id="top-nav">
+        <div class="hidden-xs" id="header-yes">
+            <a data-toggle="modal" data-target="#agree-modal" title="Нажмите, чтобы поддержать">
+                ЗА
+            </a>
+        </div>
+        <div class=" hidden-xs" style="float: left; padding: 3px 25px 0 25px">
+            <a href="/" title="Главная" rel="home" id="logo" style="width: 50px">
+                <img src="/images/applogo.png" alt="">
+            </a>
+        </div>
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a id="header-name" href="/site/about" class="navbar-brand" title="О себе">
+                ФИЛИПП ЛЮБОВЬ ВИТАЛЬЕВНА
+            </a>
+        </div>
 
-    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/site/about">О СЕБЕ</a>
+                </li>
+                <!--<li>
+                    <a href="/site/map">КАРТА</a>
+                </li>-->
+                <li>
+                    <a href="/post">ПОЗИЦИЯ</a>
+                </li>
+                <li>
+                    <a href="/articles">ПРЕССА</a>
+                </li>
+                <li>
+                    <a href="/site/videos">ВИДЕО</a>
+                </li>
+                <li style="padding: 12px 0 0 10px" class="hidden-sm hidden-md">
+                    <span class="fa-stack fa-lg social" onclick="location.href='https://vk.com/lfilipp'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg social" onclick="location.href='https://twitter.com/lfilipp77'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg social" onclick="location.href='https://www.facebook.com/profile.php?id=100007341253534&fref=ts'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-
-</head>
-<body link="black">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+<div id="agree-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 id="agree-title" class="text-center">
+                    Поддерживаю
+                </h2>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Аудиолекции</a></li>
-                    <li><a href="/Home/Video">Видеолекции</a></li>
-                    <li><a href="/Home/Harmonium">Уроки игры на физгармонии</a></li>
-                </ul>
-                    <ul class="nav navbar-nav navbar-right">
-        <li><a href="/Account/Register" id="registerLink">Зарегистрироваться</a></li>
-        <li><a href="/Account/Login" id="loginLink">Войти</a></li>
-    </ul>
-
+            <div id="agree-modal-body" class="modal-body">
+                <form id="agree-form" method="post">
+                    <div class="form-group">
+                            <input class="form-control agree-input" type="text" name="name" placeholder="ВАШЕ ИМЯ">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="text" name="email" placeholder="ЭЛЕКТРОННАЯ ПОЧТА (ЕСЛИ ИСПОЛЬЗУЕТЕ)">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control agree-input" type="text" name="tel" placeholder="ТЕЛЕФОН">
+                    </div>
+                    <div class="form-group">
+                            <textarea name="comment" rows="3" class="form-control" placeholder="ВАШ КОММЕНТАРИЙ"></textarea>
+                    </div>
+                    <div class="form-group">
+                            <button id="agree-form-btn" class="btn btn-primary btn-block">ПОДДЕРЖИВАЮ</button>
+                    </div>
+                    <div class="form-group" style="font-size: 7pt; color: grey">
+                            Даю согласие на обработку моих персональных данных, которые я сообщаю в этой форме,
+                            и получение информации.
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        
-
+</div>
 
 <script>
-    function show(id, url) {
-        if ($(id).children('div').children('iframe').length == 0) {
-            $(id).append('<div align="center"><iframe width="560" height="315" src="' + url + '" frameborder="0" allowfullscreen="" style="margin:10px"></iframe></div>');
-        } else {
-            $(id).children('div').children('iframe').show();
-        }
-    }
-    function hide() {
-        frames = $('iframe');
-        if (frames.length > 0) {
-            frames.each(function () {
-                this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    jQuery(document).ready(function() {
+        jQuery(".social").mouseover(function() {
+            jQuery(this).children("i").addClass("fa-inverse");
+            jQuery(this).children("i").next("i").removeClass("fa-inverse");
+        });
+        jQuery(".social").mouseout(function() {
+            jQuery(this).children("i").removeClass("fa-inverse");
+            jQuery(this).children("i").next("i").addClass("fa-inverse");
+        });
+	
+	var failed;
+	function check() {
+            failed = false;
+            jQuery(".agree-input").each(function() {
+                if (jQuery(this).val() === '') {
+                    jQuery(this).css({"border": "3px solid red"});
+                    failed = true;
+                } else {
+                    jQuery(this).css({"border": "1px solid #7c441f"});
+                }
             });
-            frames.hide();
         }
-    }
+	jQuery(".agree-input").keyup(check);
+	
+        function sendAgree() {
+                check();
+                if (failed) {
+                        return;
+                }
+                var inputs = jQuery("#agree-form").serialize();
+                inputs += '&page=' + location.pathname + location.search + location.hash;
+                xtables.ajax('/site/agree-with', inputs);
+        }
+        jQuery("#agree-form").submit(function(e) {
+                e.preventDefault();
+                sendAgree();
+        });
+        jQuery("#agree-form-btn").click(function(e) {
+                e.preventDefault();
+                sendAgree();
+        });
+    });
 </script>
-
-<div id="header">
-    <img id="icon" src="/images/prabhupada.jpg" />
-    <div id="title">Архив лекций Мадана Мохана Прабху</div>
+        <div class="container" style="margin-top: 0; padding-top: 0" id="body-frame">
+            <h1 class="text-center">
+    Филипп Любовь Витальевна
+</h1>
+<div style="padding: 0 20px 20px 0; float: left">
+    <img src="/images/lfillip250.png" alt="">
 </div>
-<div id="content">
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/9ty52qzjrSw?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 1</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/hN34MQd4c28?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 2</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/mNNv6Mk5GDc?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 3</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/7A0OjT8j7q4?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 4</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/EW0BPTCsG6s?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 5</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/fpr9-WijtLw?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 6</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/vQRXOtySTkQ?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 7</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/tb0sZ0sojbg?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 8</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/aBFVfAZ7piY?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Радха Мадхава</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/yejM4FvX4EY?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шри Кришна Чайтанья прабху</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/Otm9ypCTQlE?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шри Рупа Манджари пада</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/LWDjNbOl_7w?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Дамодараштакам</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/X8yj7jqstQw?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Дева Бхавантам ванде</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/4TK0IS9a7RE?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фисгармонии, Киртан 9</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/CaJqe0dJzfU?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фисгармонии, Киртан 10</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/QS-IEP2lw2k?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Парама Каруна</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/B7xiZ_8qSrg?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шад Госвами аштака</span>
-        </div>
+<p>
+    В детстве весь мир казался мне справедливым и радужным.<br />
+    Шли годы и представление об окружающей действительности менялось,
+    неизменным навсегда осталось лишь обостренное чувство справедливости.
+</p>
+<p>
+    Мне всегда хотелось созидать, защищать слабых, бороться с несправедливостью, помогать нуждающимся.<br />
+    Именно поэтому, выбирая свой жизненный путь, я осознанно решила стать юристом
+    и профессионально заниматься правозащитной деятельностью.
+</p>
+<p>
+    Закончив Московскую государственную юридическую академию я длительное время работала в органах прокуратуры Московской области и Москвы.<br />
+    Многолетний опыт по надзору за соблюдением федерального законодательства и уголовно-процессуальной
+    деятельностью органов внутренних дел и юстиции стал для меня определяющим фактором формирования мировоззрения,
+    основанного на обширной правоприменительной практике.<br />
+    Это позволило профессионально оценивать работу органов государственной власти и местного самоуправления, состояние законности в сфере соблюдения прав граждан и государственного управления.
+</p>
+<p>
+	Оценки эти были едва ли высоки, что сподвигнуло меня связать свою жизнь с общественно-политической деятельностью.<br />
+	Моя трудовая биография и раньше пересекалась с общественной работой.
+</p>
+<p>
+    Для меня государственная служба и общественная деятельность всегда были двумя сторонами одной медали.<br />
+    Невозможно было за пределами кабинета не видеть творящегося беззакония, закрывать глаза на факты нарушения прав человека, не реагировать на противоправные действия (бездействие) чиновников.
+    Волновало все: от некачественной уборки подъезда моего дома до внешнеполитических проблем страны.
+</p>
+<p>
+    Так я стала участником ОБЩЕРОССИЙСКОГО НАРОДНОГО ФРОНТА и вскоре возглавила исполком Регионального отделения ОНФ в Московской области.<br />
+    Выступая на Форуме действий-2 ОНФ Президент России В.В. Путин спросил меня: «Почему Вы ушли из прокуратуры?»<br />
+    Я ответила: «ОНФ дает возможность заниматься мне тем же, чем и в прокуратуре – защищать права и свободы граждан,
+    способствовать соблюдению законности, но делать это более творчески и креативно».
+</p>
+<p>
+    Вместе с командой единомышленников в подмосковном ОНФ мы срезали стропы «золотых парашютов» чиновников,
+    выявляли факты нецелевого расходования бюджетных средств, боролись с коррупцией и расточительством
+    во власти, защищали объекты культурного наследия, спасали русский лес, добивались повышения качества жизни людей и многое другое.<br />
+    Работая в должности советника руководителя Федерального Исполкома ОНФ диапазон проблемной повестки, которой я занималась, вырос до масштабов страны.<br />
+	Следующим этапом моей общественно-политической жизни стало официальное выдвижение кандидатом в депутаты Государственной Думы ФС РФ по Щелковскому
+	одномандатному округу № 127 от молодой и переспективной Всероссийской политической партии "Роста".
+</p>
+<p>
+    Анализируя результаты исполнения указов и поручений Президента России, реализации приоритетных государственных
+    проектов и программ, напрашиваются выводы: отчеты и официальные данные чиновников не всегда соответствуют
+    действительности и отражают реальное настроение в обществе.<br />
+    Лечение болезни всегда начинают с постановки диагноза и оценки масштаба имеющихся проблем.
+</p>
+<p>
+    Именно для этого – для фиксирования и обсуждения проблем, которые волнуют большинство населения нашей страны, создан этот сайт.<br />
+    Он призван стать не только трибуной, где каждый может высказаться и выразить свое отношение к происходящим
+    в стране процессам, но и площадкой для поиска и обсуждения механизмов решения проблем, подготовки рекомендаций
+    для органов государственной власти, направленных на повышение эффективности их работы, совершенствование действующего законодательства.<br />
+</p>
+<p>
+    Один из первых проектов регионального значения, который я предлагаю реализовать через сайт, – это социальная
+    карта Подмосковья, заполняя которую, мы сможем составить реальную, а не вымышленную картину жизни региона.
+</p>
+<p>
+    Давайте вместе заполнять страницы карты и возможно в недалеком будущем мы сможем говорить только о красотах и выдающейся истории нашей Родины и любимого края!
+</p>
+<br />
+<div class="col-lg-6 col-md-6 col-sm-6">
+	<a href="/images/bul1.jpg" target="_blank" title="Открыть в полном размере">
+		<img class="img-responsive" src="/images/bul1-small.jpg" alt="Бюллетень">
+	</a>
 </div>
-        <hr />
-        <div id="footer" class="center">
-            &copy; 2017 - Лично Мадана Мохан Прабху не имеет никакого
-            отношения к организации портала и его поддержанию,
-            и не обязательно разделяет выраженные в нём мнения
+<div class="col-lg-6 col-md-6 col-sm-6">
+	<a href="/images/bul2.jpg" target="_blank" title="Открыть в полном размере">
+		<img class="img-responsive" src="/images/bul2-small.jpg" alt="Бюллетень">
+	</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6">
+	<a href="/images/bul3.jpg" target="_blank" title="Открыть в полном размере">
+		<img class="img-responsive" src="/images/bul3-small.jpg" alt="Бюллетень">
+	</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6">
+	<a href="/images/bul4.jpg" target="_blank" title="Открыть в полном размере">
+		<img class="img-responsive" src="/images/bul4-small.jpg" alt="Бюллетень">
+	</a>
+</div>
+        </div>
+        
+<div class="container-fluid text-center"
+		style="margin-bottom: 0; background-color: #F2F2F2; background-image: url('/images/grass.png'); background-repeat: no-repeat; background-position: bottom">
+    <div class="container" id="footer-header">
+        <div class="row" id="first-row">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/site/about">О СЕБЕ</a>
+                    </li>
+                    <!--<li>
+                        <a href="/site/map">КАРТА</a>
+                    </li>-->
+                    <li>
+                        <a href="/post">ПОЗИЦИЯ</a>
+                    </li>
+                    <li>
+                        <a href="/articles">ПРЕССА</a>
+                    </li>
+                    <li>
+                        <a href="/site/videos">ВИДЕО</a>
+                    </li>
+                </ul>
+                <div class="navbar-right">
+                    <span class="fa-stack fa-lg social-gr" onclick="location.href='https://vk.com/lfilipp'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg social-gr" onclick="location.href='https://twitter.com/lfilipp77'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg social-gr" onclick="location.href='https://www.facebook.com/profile.php?id=100007341253534&fref=ts'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg social-gr">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg social-gr" onclick="location.href='https://www.youtube.com/channel/UCddqCDcFPmXMdtSEBQL6nZw'">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="footer-contacts" style="height: 60px">
+			<div class="pull-left">
+				<i class="fa fa-phone fa-li"></i>
+                Телефон: 8 (916) 074-22-47
+			</div>
+			<div class="pull-right">
+				<i class="fa fa-envelope-o fa-li"></i>
+                Электронная почта: lfilipp77@mail.ru
+			</div>
         </div>
     </div>
+</div>
+<script>
+    jQuery(window).load(function() {
+        if (jQuery(window).height() > (jQuery("#body-frame").height() + 253)) {
+            var height = jQuery(window).height() - 253;
+            jQuery("#body-frame").css({
+                "min-height": height
+            });
+        }
+        jQuery(".social-gr").mouseover(function() {
+            jQuery(this).children("i").addClass("fa-inverse");
+            jQuery(this).children("i").next("i").removeClass("fa-inverse");
+        });
+        jQuery(".social-gr").mouseout(function() {
+            jQuery(this).children("i").removeClass("fa-inverse");
+            jQuery(this).children("i").next("i").addClass("fa-inverse");
+        });
+    });
+	
+	//Yandex-metrika
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36581795 = new Ya.Metrika({
+                    id:36581795,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
 
-    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-    <script src="/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
-
-    
-</body>
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+    <div id="xtables-main-preloader" class="progress hidden"><div class="progress-bar progress-bar-info"></div></div></body>
 </html>
