@@ -27,68 +27,10 @@
     
     <body>
     	
-    	
-
-
-<script type="text/javascript">
-jQuery(document).ready(function(){
-/* функция кроссбраузерного определения отступа от верха документа к текущей позиции скроллера прокрутки */
-function getScrollTop() {
-           var scrOfY = 0;
-           if( typeof( window.pageYOffset ) == "number" ) {
-                   //Netscape compliant
-                   scrOfY = window.pageYOffset;
-           } else if( document.body
-           && ( document.body.scrollLeft
-           || document.body.scrollTop ) ) {
-                   //DOM compliant
-                   scrOfY = document.body.scrollTop;
-           } else if( document.documentElement
-           && ( document.documentElement.scrollLeft
-            || document.documentElement.scrollTop ) ) {
-                   //IE6 Strict
-                   scrOfY = document.documentElement.scrollTop;
-           }
-           return scrOfY;
-}
-jQuery(window).scroll(function() {
-	fixPaneRefresh();
-});
-function fixPaneRefresh(){
-	if (jQuery("#fixedBox").length) {
-		var top  = getScrollTop();
-        if (top < 18) jQuery("#fixedBox").css("margin-top",18-top+"px");
-        else jQuery("#fixedBox").css("margin-top","0");
-	}
-}
-});
-</script>
-
-
-
-
-<body>
-<div class="main">
-		
-		
-	</div>
-	<div class="content">
-	</div>
-</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-5053168-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-</body>
-</html>
+    	<section id="page"> <!-- Defining the #page section with the section tag -->
+    
             <header> <!-- Defining the header section of the page with the appropriate tag -->
-            <div id="fixedBox">
-
+            
                 <hgroup>
                     <h1>Your Logo</h1>
                     <h3>and a fancy slogan</h3>
@@ -101,19 +43,9 @@ pageTracker._trackPageview();
                         <li><a href="#article3">Navigation Menu</a></li>
                     </ul>
                 </nav>
-            </div>
-
+            
             </header>
-            <center><html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<link href="http://www.xiper.net/examples/css/examples.css" rel="stylesheet" type="text/css" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-
-
+            
             <section id="articles"> <!-- A new section with the articles -->
 
 				<!-- Article 1 start -->
