@@ -1,321 +1,149 @@
-<!DOCTYPE html> <!-- The new doctype -->
+
+<!DOCTYPE html>
 <html>
-    <head>
-    <style>
-body {
-    background-color: #FFFFFF;
-}
-</style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архив лекций Мадана Мохана Прабху</title>
+    <link href="/Content/css?v=i57hxuwxOTlJRuZPLMKQiJjhm0TpKKotHBZN9u3wy9U1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+
 </head>
-<body>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
-        <title>Coding A CSS3 &amp; HTML5 One Page Template | Tutorialzine demo</title>
-        
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-        
-        <!-- Internet Explorer HTML5 enabling code: -->
-        
-        <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        
-        <style type="text/css">
-        .clear {
-          zoom: 1;
-          display: block;
-        }
-        </style>
+<body link="black">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Аудиолекции</a></li>
+                    <li><a href="/Home/Video">Видеолекции</a></li>
+                    <li><a href="/Home/Harmonium">Уроки игры на физгармонии</a></li>
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Account/Register" id="registerLink">Зарегистрироваться</a></li>
+        <li><a href="/Account/Login" id="loginLink">Войти</a></li>
+    </ul>
 
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
         
-        <![endif]-->
-        
-    </head>
-    
-    <body>
-    	
-    	<section id="page"> <!-- Defining the #page section with the section tag -->
-    
-           
-            <script type="text/javascript">
-jQuery(document).ready(function(){
-/* функция кроссбраузерного определения отступа от верха документа к текущей позиции скроллера прокрутки */
-function getScrollTop() {
-           var scrOfY = 0;
-           if( typeof( window.pageYOffset ) == "number" ) {
-                   //Netscape compliant
-                   scrOfY = window.pageYOffset;
-           } else if( document.body
-           && ( document.body.scrollLeft
-           || document.body.scrollTop ) ) {
-                   //DOM compliant
-                   scrOfY = document.body.scrollTop;
-           } else if( document.documentElement
-           && ( document.documentElement.scrollLeft
-            || document.documentElement.scrollTop ) ) {
-                   //IE6 Strict
-                   scrOfY = document.documentElement.scrollTop;
-           }
-           return scrOfY;
-}
-jQuery(window).scroll(function() {
-	fixPaneRefresh();
-});
-function fixPaneRefresh(){
-	if (jQuery("#fixedBox").length) {
-		var top  = getScrollTop();
-        if (top < 18) jQuery("#fixedBox").css("margin-top",18-top+"px");
-        else jQuery("#fixedBox").css("margin-top","0");
-	}
-}
-});
-</script>
 
 
-
-<style type="text/css">
-<!--
-.main {
-	width: 960px;
-	margin: 0 auto;
-}
-.header {
-	height: 0 auto;
-	background-color: #C5E4ED;
-}
-.content {
-	height: 20px;
-}
-#fixedBox {
-	font-size: 16px;
-	text-align: center;
-	border-top: 1px solid #539127;
-	border-bottom: 1px solid #538127;
-	height: 50px;
-	line-height: 50px;
-	background-color: #E8F8FC;
-	width: 960px;
-	position: fixed;
-	/* отступ сверху */
-	margin-top: 16px;
-}
--->
-</style>
-</head>
-<body>
-<div class="main">
-		
-		<div id="fixedBox">
-			<font size="+4"><font face="Monotype Corsiva"> <a href="index.html"style="text-decoration: none; color:black;">Радио "Навайя"</a> </font></font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link1"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';">  <font face="Tahoma"><font size="+1,6">О НАС </font></font> </font></a> &nbsp; &nbsp;<a href="#link2"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">ЭФИР </font></font></font></a> &nbsp; &nbsp;<a href="#link3"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">НОВОСТИ </font></font></font></a> &nbsp; &nbsp;<a href="#link4"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">ВИДЕО </font></font></font></a> &nbsp; &nbsp;<a href="#link5"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">РАСПИСАНИЕ </font></font></font></a> &nbsp; &nbsp;<a href="#link6"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">КОНТАКТЫ </font></font></font></a>
-		</div>
-	</div>
-	<div class="content">
-	</div>
-</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-5053168-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-</body>
-
-<br>
-<a id="link1">style="text-decoration: none;<hr>	
-<br>
-<br>	
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">OUR STORY</font> </font> </font></center>
-<br>	
-<font size="+1,5"> <font face="Tahoma"> &nbsp; &nbsp; &nbsp; &nbsp;style="text-decoration: none;Радио «Навайя» - проект музыканта, поэта и журналиста Антона Ц. Все 24 часа в сутки в эфире звучат беседы с интересными людьми, репортажи с различных культурных мероприятий, проходящих в Москве и Подмосковье (вернисажей, выставок, концертов, творческих вечеров, презентаций), новости культуры, авторская музыка и песни в исполнении как самого Антона Ц, так и его друзей, соратников и других достойных и талантливых артистов. 
-<br> &nbsp; &nbsp; &nbsp; &nbsp;«К Слову» - литературный радио-альманах, где гостями студии радио «Навайя» являются поэты – члены Щёлковского районного литературного объединения «Слово». Это ветераны клуба, стоявшие у истоков его создания, а также молодые участники объединения, свершающие лишь первые шаги на пути к признанию и славе. Беседы ведутся в преддверии 60- летия лито. 
-<br> &nbsp; &nbsp; &nbsp; &nbsp;Программа «Архитектура XX века» - проект, реализованный совместно с Щёлковским историко-краеведческим музеем. Антон Ц ведёт беседы со своими гостями как об архитектуре прошлого столетия применительно к Щёлковскому району Московской области (малой Родине автора и экспертов программы), так и в целом, об истории таких архитектурных методов и стилей как конструктивизм, модерн, сталинский ампир, современных новшествах в этой сфере и многом другом. Участники программы – это профессиональные строители, архитекторы, дизайнеры и художники. Один из постоянных соавторов передачи – кандидат архитектуры, преподаватель МАРХИ Алексей Воробьёв. 
-<br> &nbsp; &nbsp; &nbsp; &nbsp;«Искусство видеть мир» - рубрика, в которой её автор и ведущий Антон Ц рассказывает о творческих людях и их судьбах. Героями очередного выпуска могут быть музыканты, художники, актёры, режиссёры, искусствоведы – люди, для которых искусство является неотъемлемой частью жизни. 
-<br> &nbsp; &nbsp; &nbsp; &nbsp;Радио «Навайя» - волна для тех, кто хочет чувствовать себя истинным эстетом. Слушайте и насыщайтесь! Открывайте ранее неведомые миры, постигайте новое каждый день! Умейте любить жизнь и по-настоящему наслаждаться каждым её мгновением!</font></font>  
-<br>
-<br>
-<br>      
-<a id="link2"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">LIVE</font> </font> </font></center>	
-<br>
-<br>
-<table width=100%>
-<tr><td width=50%>
-<font size="+2,5"><font face="Tahoma"><b>Online-вещание:</b></font></font> 
-<br>
-<br>	
-<iframe src="https://myownradio.biz/widget/?stream_id=321" width="350" height="350"></iframe>
-<td width=50%>
-<br>	
-<a href="https://myownradio.biz/content/m3u/navaja.m3u"><br><font size="+2,3"> <font face="Tahoma"><font color="Black">Слушать радио "Навайя" в своём медиа-плеере >> </font> </font> </font></a>
-<br>
-<br>	
-<i>(WinAmp, Windows Media Player, RealOne Player и другие)</i>	
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>	
-<br>	
-<font size="+2,7"><font face="Tahoma">Мы в социальных сетях:<font face="Tahoma"></font>
-<br>	
-<img src="fb.png"><img src="tw.png"><img src="yt.png"><img src="vk.png">
-</table>	
-<br>
-<br>
-<br>      
-<a id="link3"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">NEWS</font> </font> </font></center>	
-<br>
-<br>
 <script>
-var show;
-function hidetxt(type){
- param=document.getElementById(type);
- if(param.style.display == "none") {
- if(show) show.style.display = "none";
- param.style.display = "block";
- show = param;
- }else param.style.display = "none"
-}
+    function show(id, url) {
+        if ($(id).children('div').children('iframe').length == 0) {
+            $(id).append('<div align="center"><iframe width="560" height="315" src="' + url + '" frameborder="0" allowfullscreen="" style="margin:10px"></iframe></div>');
+        } else {
+            $(id).children('div').children('iframe').show();
+        }
+    }
+    function hide() {
+        frames = $('iframe');
+        if (frames.length > 0) {
+            frames.each(function () {
+                this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            });
+            frames.hide();
+        }
+    }
 </script>
-	
-<center>
-<font color="fuchsia"><font size="+3">Т.Б. Ершова: Спасибо за добросовестный труд!"</font></font>
-<br>
-<br>
-<div>
-<a onclick="hidetxt('div1'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Глава города Щёлково Т.Б. Ершова наградила Антона Бутовца Благодарственным письмом за добросовестный плодотворный труд и высокий профессионализм в работе.</font> </a>
-<div style="display:none;" id="div1">
-<img src="1111.jpeg">
+
+<div id="header">
+    <img id="icon" src="/images/prabhupada.jpg" />
+    <div id="title">Архив лекций Мадана Мохана Прабху</div>
 </div>
+<div id="content">
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/9ty52qzjrSw?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 1</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/hN34MQd4c28?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 2</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/mNNv6Mk5GDc?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 3</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/7A0OjT8j7q4?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 4</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/EW0BPTCsG6s?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 5</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/fpr9-WijtLw?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 6</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/vQRXOtySTkQ?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 7</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/tb0sZ0sojbg?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 8</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/aBFVfAZ7piY?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Радха Мадхава</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/yejM4FvX4EY?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шри Кришна Чайтанья прабху</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/Otm9ypCTQlE?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шри Рупа Манджари пада</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/LWDjNbOl_7w?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Дамодараштакам</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/X8yj7jqstQw?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Дева Бхавантам ванде</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/4TK0IS9a7RE?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фисгармонии, Киртан 9</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/CaJqe0dJzfU?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фисгармонии, Киртан 10</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/QS-IEP2lw2k?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Парама Каруна</span>
+        </div>
+        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/B7xiZ_8qSrg?enablejsapi=1');" class="link">
+            <img class="btn-download" src="/images/view.png">
+            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шад Госвами аштака</span>
+        </div>
 </div>
-<br>
-<br>
-<hr>	
-<font color="fuchsia"><font size="+3">Д.В. Саблин: "Благодарю Вас за очень важную работу!"</font></font>	
-<br>
-<br>
-<div>
-<a onclick="hidetxt('div2'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Депутат Государственной думы РФ, Первый заместитель председателя комитета ГД РФ по делам Содружества Независимых Государств и связям с соотечественниками Дмитрий Саблин поздравил Антона Бутовца с Днём защитника Отечества:</font></a>
-<div style="display:none;" id="div2">
-<br>
-<font size="+1"><centr>Уважаемый Антон Александрович!</centr><font>
-<br> 
-<font size="+1"><div align=left>&nbsp;&nbsp;&nbsp;&nbsp;«Маяковский в своё время произнёс крылатую фразу: «Я хочу, чтоб к штыку прировняли перо». В этой короткой строчке – мысль, отразившая судьбу нескольких поколений отечественной журналистики. Тех, кто на передовой писал заметки для дивизионных газет, а потом брал винтовку и поднимался в атаку, защищая столицу. Тех, кто рассказывал нам о судьбе солдат, водивших караваны грузовиков в Афганистане. И тех, кто сегодня защищает интересы наших граждан – жителей наших городов и районов – освещая самые острые вопросы современной российской действительности. Ибо эта работа тоже требует и таланта, и решительности, и зачастую – настоящего мужества.
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;От всей души благодарю Вас за публикацию материалов, посвящённых моей работе: о деятельности Государственной Думы, депутатских приёмных, о проблемах самых незащищённых групп населения. На эти темы нелегко говорить, их трудно публиковать. И тем важнее работа, которую Вы делаете!
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;Желаю Вам профессиональных успехов, личного благополучия, и удачи во всех начинаниях!»</div> </font> 
- 
-                                                                                                                                                                       <div align=right>23 февраля 2013 г.</div>
-</div>
-</div>
-<br>
-<br>
-<hr>	
-<font color="fuchsia"><font size="+3">Антона Бутовца наградили в Кремле</font></font> 	
-<br>
-<br>
-<div>
-<a onclick="hidetxt('div3'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Щелковские журналисты стали обладателями премий в конкурсе «Я люблю Россию».</font></a>
-<div style="display:none;" id="div3">
-<font size="+1"><div align=left>&nbsp;&nbsp;&nbsp;&nbsp;Корреспонденты отдела радиовещания Щелковского информагентства вошли в число победителей шестого открытого Межрегионального фестиваля-конкурса пишущей братии «Я люблю Россию».
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Награждение состоялось на прошлой неделе в государственном Кремлевском дворце. В конкурсе приняли участие журналисты печатных, радио и телередакций со всей России – из Калининграда, Иркутска, Севастополя и других городов.
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;Щелковское радио стало победителем сразу в двух номинациях: «Гражданская позиция журналиста» за сюжет «Готовься служить» Михаила Налетова о проблеме недобора призывников в армию.
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;В номинации «Память сердца» в числе лучших отмечен радиоочерк Антона Бутовца о народном учителе России В. Н. Чепурове.</div>
-<br> 
-<div align=right>гезета "Ежедневные новости. Подмосковье" от 20 декабря 2011 г.</div></font>
-</div>
-</div>
-<br>
-<br>
-<hr>	
-<font color="fuchsia"><font size="+3">В поиске важного и доброго</font></font>	
-<br>
-<br>
-<div>
-<a onclick="hidetxt('div4'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Корреспонденты отдела радиовещания Щелковского информагентства вошли в число победителей шестого открытого межрегионального фестиваля-конкурса «Я люблю Россию».</font></a>
-<div style="display:none;" id="div4">
-<br>
-<font size="+1"><div align=left>&nbsp;&nbsp;&nbsp;&nbsp;Награждение состоялось 13 декабря в Государственном Кремлевском дворце в День святого апостола Андрея Первозванного. В конкурсе приняли участие журналисты печатных, радиои телередакций со всей России – из Калининграда, Удмуртии, Иркутска, Севастополя и других городов. Устроителями выступили Центр национальной славы и фонд, носящий имя святого апостола, при финансовой поддержке ОАО «РЖД».
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Щелковское радио стало победителем сразу в двух номинациях: в «Гражданской позиции журналиста» за сюжет «Готовься служить» Михаила Налетова о проблеме недобора призывников в армию и в «Памяти сердца» за радиоочерк Антона Бутовца о народном учителе России В.Н. Чепурове.
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;Гран-при конкурса увезла журналист Воткинской рабочей газеты «Трудовая вахта» Республики Удмуртия Татьяна Любивая – за серию публикаций, рассказывающих о вкладе в космическую отрасль коллектива завода.
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;Подводя итоги, президент центра Сергей Шеблыгин отметил: «Журналисты в поиске информации не всегда ориентируются на важное и доброе, забывая об ответственности за страну, за нравственный климат, за будущее детей. Те, кто сегодня получил награды, такие усилия, несомненно, предпринимают».</div>
-<br> 
-<div align=right>гезета "Время" от 21 декабря 2011 г.</div></font> 
-</div>
-</div></center>	
-<br>
-<br>
-<br>      
-<a id="link4"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">VIDEO</font> </font> </font></center>	
-<br>
-<br>	
-  &nbsp; &nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/162183318?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
- <iframe src="https://player.vimeo.com/video/162190612?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/162200764?byline=0&portrait=0" width="440" height="226" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<iframe src="https://player.vimeo.com/video/169352234?byline=0&portrait=0" width="440" height="226" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/173988293?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<iframe src="https://player.vimeo.com/video/216283503?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/174003137?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<iframe src="https://player.vimeo.com/video/169346555?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<br>
-<br>
-<br>      
-<a id="link5"><hr size=9 color="#FF0000">
-<br>
-<br>
-	<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">SHEDULE</font> </font> </font></center>	
-<br>
-<br>
-<br>
-<br>
-<br>      
-<a id="link6"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">CONTACT</font> </font> </font></center>	
-<br>
-<br>
-<center>По вопросам сотрудничества, рекламы и предложений
-<br>
-пишите на нашу электронную почту: 
-<br>
-<br>
-	<font size="+3">navajamusic@gmail.com</font></center>	
-<br>
-<br>
-<center><img src="SrMtm1vd7Lw.jpg"></center>	
-<br>
-<hr size=9 color="#FF0000">
-<br>
-<br>
-<br>
-<br>	
- <center>2017 © Все права защищены</center> </center>			
-<br>	
-<br>	
-<br>
-<br>
-<br>
+        <hr />
+        <div id="footer" class="center">
+            &copy; 2018 - Лично Мадана Мохан Прабху не имеет никакого
+            отношения к организации портала и его поддержанию,
+            и не обязательно разделяет выраженные в нём мнения
+        </div>
+    </div>
+
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    <script src="/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+    
+</body>
+</html>
