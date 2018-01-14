@@ -1,149 +1,126 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Архив лекций Мадана Мохана Прабху</title>
-    <link href="/Content/css?v=i57hxuwxOTlJRuZPLMKQiJjhm0TpKKotHBZN9u3wy9U1" rel="stylesheet"/>
 
-    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8" />
+	<title>Фиксированное «плавающее» меню.</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel="stylesheet" type="text/css" href="css/fixed_menu.css" media="all" />
+	<script src="script/jquery-1.9.1.min.js"></script>
+	 
+	 <!--[if lt IE 9]>
+      <script src="script/html5.js"></script>	 
+     <![endif]-->
+	
+	<script>
+		var h_hght = 150; // высота шапки
+		var h_mrg = 0;	  // отступ когда шапка уже не видна
+				
+		$(function(){
+		
+			var elem = $('#top_nav');
+			var top = $(this).scrollTop();
+			
+			if(top > h_hght){
+				elem.css('top', h_mrg);
+			}			
+			
+			$(window).scroll(function(){
+				top = $(this).scrollTop();
+				
+				if (top+h_mrg < h_hght) {
+					elem.css('top', (h_hght-top));
+				} else {
+					elem.css('top', h_mrg);
+				}
+			});
+		
+		});
+    </script>
 
-
-</head>
-<body link="black">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Аудиолекции</a></li>
-                    <li><a href="/Home/Video">Видеолекции</a></li>
-                    <li><a href="/Home/Harmonium">Уроки игры на физгармонии</a></li>
-                </ul>
-                    <ul class="nav navbar-nav navbar-right">
-        <li><a href="/Account/Register" id="registerLink">Зарегистрироваться</a></li>
-        <li><a href="/Account/Login" id="loginLink">Войти</a></li>
-    </ul>
-
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        
-
-
-<script>
-    function show(id, url) {
-        if ($(id).children('div').children('iframe').length == 0) {
-            $(id).append('<div align="center"><iframe width="560" height="315" src="' + url + '" frameborder="0" allowfullscreen="" style="margin:10px"></iframe></div>');
-        } else {
-            $(id).children('div').children('iframe').show();
-        }
-    }
-    function hide() {
-        frames = $('iframe');
-        if (frames.length > 0) {
-            frames.each(function () {
-                this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-            });
-            frames.hide();
-        }
-    }
-</script>
-
-<div id="header">
-    <img id="icon" src="/images/prabhupada.jpg" />
-    <div id="title">Архив лекций Мадана Мохана Прабху</div>
-</div>
-<div id="content">
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/9ty52qzjrSw?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 1</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/hN34MQd4c28?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 2</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/mNNv6Mk5GDc?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 3</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/7A0OjT8j7q4?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 4</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/EW0BPTCsG6s?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 5</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/fpr9-WijtLw?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 6</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/vQRXOtySTkQ?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 7</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/tb0sZ0sojbg?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Киртан 8</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/aBFVfAZ7piY?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Радха Мадхава</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/yejM4FvX4EY?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шри Кришна Чайтанья прабху</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/Otm9ypCTQlE?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шри Рупа Манджари пада</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/LWDjNbOl_7w?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Дамодараштакам</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/X8yj7jqstQw?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Дева Бхавантам ванде</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/4TK0IS9a7RE?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фисгармонии, Киртан 9</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/CaJqe0dJzfU?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фисгармонии, Киртан 10</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/QS-IEP2lw2k?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Парама Каруна</span>
-        </div>
-        <div onclick="hide(); show(this, 'https://www.youtube.com/embed/B7xiZ_8qSrg?enablejsapi=1');" class="link">
-            <img class="btn-download" src="/images/view.png">
-            <span>Мадана Мохан Прабху - Уроки игры на фиcгармонии, Шад Госвами аштака</span>
-        </div>
-</div>
-        <hr />
-        <div id="footer" class="center">
-            &copy; 2018 - Лично Мадана Мохан Прабху не имеет никакого
-            отношения к организации портала и его поддержанию,
-            и не обязательно разделяет выраженные в нём мнения
-        </div>
-    </div>
-
-    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
-
-    <script src="/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
-
-    
-</body>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+			<h2>Company name</h2>
+			</header>
+			<nav id="top_nav">
+				<ul>
+					<li class="first"><a href="">Пункт 1</a></li>
+					<li><a href="">Пункт 2</a></li>
+					<li><a href="">Пункт 3</a></li>
+					<li><a href="">Пункт 4</a></li>
+					<li><a href="">Пункт 5</a></li>					
+				</ul>
+			</nav>
+			<div id="content">
+			<h1>Lorem ipsum dolor sit amet!</h1>
+			<p><img src="img/1.jpg" style="width:px; height:px;" class="cont_img" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus auctor luctus. Quisque consectetur neque et enim vestibulum et ornare tortor lobortis. Mauris lacinia faucibus convallis.</p>
+			<p>Maecenas at nulla enim, a congue turpis. Nam volutpat ullamcorper erat sit amet mattis. Ut auctor vestibulum justo. Fusce lobortis erat a neque aliquet pulvinar. Curabitur ut ipsum eros. Donec in sapien vel dui tincidunt ultricies. Nullam cursus egestas hendrerit. Duis justo eros, semper ac rutrum id, adipiscing a sapien. Aliquam mattis convallis ultrices.</p>
+			<p>Morbi nec nisl at mi placerat tempus. Proin convallis tortor vel augue posuere in pulvinar lorem commodo. Donec magna ligula, placerat et suscipit et, condimentum vel mauris.</p>
+			<p>Cras bibendum, lectus ut ullamcorper porttitor, mi augue auctor erat, sit amet pulvinar tellus arcu at erat. Sed dui diam, congue eu ultricies a, fermentum id dolor. Praesent euismod auctor est ac luctus. Morbi tristique sodales sapien, sollicitudin dictum quam lacinia nec.</p>
+			<p>Etiam mauris magna, euismod in porta faucibus, pellentesque tempus quam. Phasellus ante urna, tempor vel scelerisque id, commodo eu ipsum. Suspendisse non lorem dui. Pellentesque tincidunt elit a eros consectetur sit amet suscipit enim commodo. </p>
+			<p>Sed ipsum nunc, fringilla ut consectetur eget, laoreet a felis. Sed molestie scelerisque cursus. Suspendisse viverra bibendum viverra. Aenean varius scelerisque leo quis commodo.</p>
+			<p>Quisque venenatis felis eget erat laoreet porta. Fusce ultricies volutpat suscipit. Integer ultrices, mauris non pellentesque tincidunt, dolor felis tristique eros, sed mollis neque elit quis ipsum.</p>
+			<h3>Cras lacus nisi, eleifend vitae convallis</h3>
+			<p>Cras lacus nisi, eleifend vitae convallis hendrerit, tincidunt et ante. Sed vel bibendum mi. Aenean sit amet neque arcu, sed mattis mauris. Etiam at magna eu nunc interdum fermentum vel eu ipsum. Nam mattis pharetra enim et hendrerit. Vestibulum justo ipsum, ultricies faucibus consequat id, interdum sed odio. Proin at lectus enim.</p>
+			<p>Aliquam erat volutpat. Suspendisse id libero ac justo condimentum consectetur et nec erat. Quisque erat sem, commodo ac laoreet eu, interdum ac urna. Vestibulum ultricies ultrices cursus.</p>
+			<p>Phasellus porttitor facilisis justo, nec ullamcorper nisi feugiat posuere. Morbi in lacus ligula, a adipiscing nisl. Pellentesque vitae turpis nisi. Etiam luctus, mauris sit amet hendrerit dapibus, orci elit ornare leo, eu volutpat tellus ligula ut arcu. In sodales urna at dolor posuere dignissim. Vivamus condimentum mattis dui, sed mollis nunc vulputate vel. </p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus auctor luctus. Quisque consectetur neque et enim vestibulum et ornare tortor lobortis. Mauris lacinia faucibus convallis.</p>
+			<p>Maecenas at nulla enim, a congue turpis. Nam volutpat ullamcorper erat sit amet mattis. Ut auctor vestibulum justo. Fusce lobortis erat a neque aliquet pulvinar. Curabitur ut ipsum eros. Donec in sapien vel dui tincidunt ultricies. Nullam cursus egestas hendrerit. Duis justo eros, semper ac rutrum id, adipiscing a sapien. Aliquam mattis convallis ultrices.</p>
+			<p>Morbi nec nisl at mi placerat tempus. Proin convallis tortor vel augue posuere in pulvinar lorem commodo. Donec magna ligula, placerat et suscipit et, condimentum vel mauris.</p>
+			<h3>Etiam mauris magna, euismod in porta faucibus</h3>
+			<p><img src="img/2.jpg" style="width:px; height:px;" class="cont_img img_right" />Cras bibendum, lectus ut ullamcorper porttitor, mi augue auctor erat, sit amet pulvinar tellus arcu at erat. Sed dui diam, congue eu ultricies a, fermentum id dolor. Praesent euismod auctor est ac luctus. Morbi tristique sodales sapien, sollicitudin dictum quam lacinia nec.</p>
+			<p>Etiam mauris magna, euismod in porta faucibus, pellentesque tempus quam. Phasellus ante urna, tempor vel scelerisque id, commodo eu ipsum. Suspendisse non lorem dui. Pellentesque tincidunt elit a eros consectetur sit amet suscipit enim commodo. </p>
+			<p>Sed ipsum nunc, fringilla ut consectetur eget, laoreet a felis. Sed molestie scelerisque cursus. Suspendisse viverra bibendum viverra. Aenean varius scelerisque leo quis commodo.</p>
+			<p>Quisque venenatis felis eget erat laoreet porta. Fusce ultricies volutpat suscipit. Integer ultrices, mauris non pellentesque tincidunt, dolor felis tristique eros, sed mollis neque elit quis ipsum.</p>
+			<p>Cras lacus nisi, eleifend vitae convallis hendrerit, tincidunt et ante. Sed vel bibendum mi. Aenean sit amet neque arcu, sed mattis mauris. Etiam at magna eu nunc interdum fermentum vel eu ipsum. Nam mattis pharetra enim et hendrerit. Vestibulum justo ipsum, ultricies faucibus consequat id, interdum sed odio. Proin at lectus enim.</p>
+			<p>Aliquam erat volutpat. Suspendisse id libero ac justo condimentum consectetur et nec erat. Quisque erat sem, commodo ac laoreet eu, interdum ac urna. Vestibulum ultricies ultrices cursus.</p>
+			<p>Phasellus porttitor facilisis justo, nec ullamcorper nisi feugiat posuere. Morbi in lacus ligula, a adipiscing nisl. Pellentesque vitae turpis nisi. Etiam luctus, mauris sit amet hendrerit dapibus, orci elit ornare leo, eu volutpat tellus ligula ut arcu. In sodales urna at dolor posuere dignissim. Vivamus condimentum mattis dui, sed mollis nunc vulputate vel. </p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus auctor luctus. Quisque consectetur neque et enim vestibulum et ornare tortor lobortis. Mauris lacinia faucibus convallis.</p>
+			<h3>Maecenas at nulla enim, a congue turpis</h3>
+			<p>Maecenas at nulla enim, a congue turpis. Nam volutpat ullamcorper erat sit amet mattis. Ut auctor vestibulum justo. Fusce lobortis erat a neque aliquet pulvinar. Curabitur ut ipsum eros. Donec in sapien vel dui tincidunt ultricies. Nullam cursus egestas hendrerit. Duis justo eros, semper ac rutrum id, adipiscing a sapien. Aliquam mattis convallis ultrices.</p>
+			<p>Morbi nec nisl at mi placerat tempus. Proin convallis tortor vel augue posuere in pulvinar lorem commodo. Donec magna ligula, placerat et suscipit et, condimentum vel mauris.</p>
+			<p>Cras bibendum, lectus ut ullamcorper porttitor, mi augue auctor erat, sit amet pulvinar tellus arcu at erat. Sed dui diam, congue eu ultricies a, fermentum id dolor. Praesent euismod auctor est ac luctus. Morbi tristique sodales sapien, sollicitudin dictum quam lacinia nec.</p>
+			<p>Etiam mauris magna, euismod in porta faucibus, pellentesque tempus quam. Phasellus ante urna, tempor vel scelerisque id, commodo eu ipsum. Suspendisse non lorem dui. Pellentesque tincidunt elit a eros consectetur sit amet suscipit enim commodo. </p>
+			<div class="separator"></div>
+			<p style="font-style:italic;">Sed ipsum nunc, fringilla ut consectetur eget, laoreet a felis. Sed molestie scelerisque cursus. Suspendisse viverra bibendum viverra. Aenean varius scelerisque leo quis commodo.</p>
+			<p style="font-style:italic;">Quisque venenatis felis eget erat laoreet porta. Fusce ultricies volutpat suscipit. Integer ultrices, mauris non pellentesque tincidunt, dolor felis tristique eros, sed mollis neque elit quis ipsum.</p>
+			<p style="font-style:italic;">Cras lacus nisi, eleifend vitae convallis hendrerit, tincidunt et ante. Sed vel bibendum mi. Aenean sit amet neque arcu, sed mattis mauris. Etiam at magna eu nunc interdum fermentum vel eu ipsum. Nam mattis pharetra enim et hendrerit. Vestibulum justo ipsum, ultricies faucibus consequat id, interdum sed odio. Proin at lectus enim.</p>
+			<div class="separator"></div>
+			<p>Aliquam erat volutpat. Suspendisse id libero ac justo condimentum consectetur et nec erat. Quisque erat sem, commodo ac laoreet eu, interdum ac urna. Vestibulum ultricies ultrices cursus.</p>
+			<p>Phasellus porttitor facilisis justo, nec ullamcorper nisi feugiat posuere. Morbi in lacus ligula, a adipiscing nisl. Pellentesque vitae turpis nisi. Etiam luctus, mauris sit amet hendrerit dapibus, orci elit ornare leo, eu volutpat tellus ligula ut arcu. In sodales urna at dolor posuere dignissim. Vivamus condimentum mattis dui, sed mollis nunc vulputate vel. </p>
+			<h3>Cras bibendum, lectus ut ullamcorper</h3>
+			<p><img src="img/3.jpg" style="width:px; height:px;" class="cont_img" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus auctor luctus. Quisque consectetur neque et enim vestibulum et ornare tortor lobortis. Mauris lacinia faucibus convallis.</p>
+			<p>Maecenas at nulla enim, a congue turpis. Nam volutpat ullamcorper erat sit amet mattis. Ut auctor vestibulum justo. Fusce lobortis erat a neque aliquet pulvinar. Curabitur ut ipsum eros. Donec in sapien vel dui tincidunt ultricies. Nullam cursus egestas hendrerit. Duis justo eros, semper ac rutrum id, adipiscing a sapien. Aliquam mattis convallis ultrices.</p>
+			<p>Morbi nec nisl at mi placerat tempus. Proin convallis tortor vel augue posuere in pulvinar lorem commodo. Donec magna ligula, placerat et suscipit et, condimentum vel mauris.</p>
+			<p>Cras bibendum, lectus ut ullamcorper porttitor, mi augue auctor erat, sit amet pulvinar tellus arcu at erat. Sed dui diam, congue eu ultricies a, fermentum id dolor. Praesent euismod auctor est ac luctus. Morbi tristique sodales sapien, sollicitudin dictum quam lacinia nec.</p>
+			<p>Etiam mauris magna, euismod in porta faucibus, pellentesque tempus quam. Phasellus ante urna, tempor vel scelerisque id, commodo eu ipsum. Suspendisse non lorem dui. Pellentesque tincidunt elit a eros consectetur sit amet suscipit enim commodo. </p>
+			<p>Sed ipsum nunc, fringilla ut consectetur eget, laoreet a felis. Sed molestie scelerisque cursus. Suspendisse viverra bibendum viverra. Aenean varius scelerisque leo quis commodo.</p>
+			<p>Quisque venenatis felis eget erat laoreet porta. Fusce ultricies volutpat suscipit. Integer ultrices, mauris non pellentesque tincidunt, dolor felis tristique eros, sed mollis neque elit quis ipsum.</p>
+			<p>Cras lacus nisi, eleifend vitae convallis hendrerit, tincidunt et ante. Sed vel bibendum mi. Aenean sit amet neque arcu, sed mattis mauris. Etiam at magna eu nunc interdum fermentum vel eu ipsum. Nam mattis pharetra enim et hendrerit. Vestibulum justo ipsum, ultricies faucibus consequat id, interdum sed odio. Proin at lectus enim.</p>
+			<p>Aliquam erat volutpat. Suspendisse id libero ac justo condimentum consectetur et nec erat. Quisque erat sem, commodo ac laoreet eu, interdum ac urna. Vestibulum ultricies ultrices cursus.</p>
+			<p>Phasellus porttitor facilisis justo, nec ullamcorper nisi feugiat posuere. Morbi in lacus ligula, a adipiscing nisl. Pellentesque vitae turpis nisi. Etiam luctus, mauris sit amet hendrerit dapibus, orci elit ornare leo, eu volutpat tellus ligula ut arcu. In sodales urna at dolor posuere dignissim. Vivamus condimentum mattis dui, sed mollis nunc vulputate vel. </p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus auctor luctus. Quisque consectetur neque et enim vestibulum et ornare tortor lobortis. Mauris lacinia faucibus convallis.</p>
+			<p>Maecenas at nulla enim, a congue turpis. Nam volutpat ullamcorper erat sit amet mattis. Ut auctor vestibulum justo. Fusce lobortis erat a neque aliquet pulvinar. Curabitur ut ipsum eros. Donec in sapien vel dui tincidunt ultricies. Nullam cursus egestas hendrerit. Duis justo eros, semper ac rutrum id, adipiscing a sapien. Aliquam mattis convallis ultrices.</p>
+			<p><p><img src="img/4.jpg" style="width:px; height:px;" class="cont_img img_right" />Morbi nec nisl at mi placerat tempus. Proin convallis tortor vel augue posuere in pulvinar lorem commodo. Donec magna ligula, placerat et suscipit et, condimentum vel mauris.</p>
+			<p>Cras bibendum, lectus ut ullamcorper porttitor, mi augue auctor erat, sit amet pulvinar tellus arcu at erat. Sed dui diam, congue eu ultricies a, fermentum id dolor. Praesent euismod auctor est ac luctus. Morbi tristique sodales sapien, sollicitudin dictum quam lacinia nec.</p>
+			<p>Etiam mauris magna, euismod in porta faucibus, pellentesque tempus quam. Phasellus ante urna, tempor vel scelerisque id, commodo eu ipsum. Suspendisse non lorem dui. Pellentesque tincidunt elit a eros consectetur sit amet suscipit enim commodo. </p>
+			<p>Sed ipsum nunc, fringilla ut consectetur eget, laoreet a felis. Sed molestie scelerisque cursus. Suspendisse viverra bibendum viverra. Aenean varius scelerisque leo quis commodo.</p>
+			<p>Quisque venenatis felis eget erat laoreet porta. Fusce ultricies volutpat suscipit. Integer ultrices, mauris non pellentesque tincidunt, dolor felis tristique eros, sed mollis neque elit quis ipsum.</p>
+			<p>Cras lacus nisi, eleifend vitae convallis hendrerit, tincidunt et ante. Sed vel bibendum mi. Aenean sit amet neque arcu, sed mattis mauris. Etiam at magna eu nunc interdum fermentum vel eu ipsum. Nam mattis pharetra enim et hendrerit. Vestibulum justo ipsum, ultricies faucibus consequat id, interdum sed odio. Proin at lectus enim.</p>
+			<p>Aliquam erat volutpat. Suspendisse id libero ac justo condimentum consectetur et nec erat. Quisque erat sem, commodo ac laoreet eu, interdum ac urna. Vestibulum ultricies ultrices cursus.</p>
+			<p>Phasellus porttitor facilisis justo, nec ullamcorper nisi feugiat posuere. Morbi in lacus ligula, a adipiscing nisl. Pellentesque vitae turpis nisi. Etiam luctus, mauris sit amet hendrerit dapibus, orci elit ornare leo, eu volutpat tellus ligula ut arcu. In sodales urna at dolor posuere dignissim. Vivamus condimentum mattis dui, sed mollis nunc vulputate vel. </p>
+			</div>
+			<footer>
+			<h2>Company name</h2>
+			<p>Address:…</p>
+			<p>Phone:…</p>
+			<p>E-mail:…</p>
+			</footer>
+		</div>
+	</body>
 </html>
