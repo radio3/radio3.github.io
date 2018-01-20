@@ -1,376 +1,164 @@
-PHP
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Lynx_Lynx" />
 
-<div id="menu_div">
- <div id="navigation">
- <div id="menu">
- <ul id="nav">
- <li><a href="#">Главная</a>
- <ul>
-<li><a href="#">Новости</a></li>
-<li><a href="#">Интересно</a>
- <ul>
-<li><a href="#">JavaScript</a></li>
-<li><a href="#">jQuery</a></li>
-<li><a href="#">CSS3</a>
- <ul>
-<li><a href="#">Инофрмация</a></li>
-<li><a href="#">Инструкция</a></li>
-<li><a href="#">Шпаргалки</a>
- <ul>
-<li><a href="#">На русском языке</a></li>
-<li><a href="#">На английском языке</a></li>
-<li><a href="#">На украинском языке</a></li>
- </ul>
- </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
- </li>
- <li><a href="#">Денвер</a>
- <ul>
-<li><a href="#">Информация</a></li>
-<li><a href="#">Как установить сайта</a></li>
-<li><a href="#">Хаки</a>>
- </li>
- </ul>
- </li>
+	<title>Прилипающее к верху меню</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+ <style>
+ /*demo page style*/
+    body {background: #f0f0f0;}
+    h1{
+    	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+    	text-shadow:0 1px 1px black;
+  
+    	/* The logo text */
+    	font-size:3.5em;
+    	padding:0.5em 0 0;
+    	text-transform:uppercase;
+        margin:0; padding:0;
+    }
+    
+    p {line-height:1.5em; padding-bottom:1em;}
+    
+    #wrapper {
+        width:920px;
+        margin:0 auto;
+        padding: 0;
+    }
+    
+    #header {height: 150px;}
+    
+    #logo {height: 100px;}
+    
+/*main menu*/
+    #menu {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 50px;
+        background: #69c;
+        
+        text-shadow:0 1px 1px black;
+       -moz-border-radius: 5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+    #menu ul {padding:0; margin:0;}
+    #menu li{
+        display: inline;
+        list-style:none;
+        margin: 5px 10px;
+    }
+    
+    #menu li a {
+        padding:5px 10px;
+        color:#fff;
+        text-decoration: none;
+        
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
 
- <li><a href="#">Информация</a>
- <ul>
-<li><a href="#">Полезное</a></li>
-<li><a href="#">Соглашение</a></li>
- </ul>
- </li>
- <li><a href="#">Сервисы</a></li>
- </ul>
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-<div id="menu_div">
- <div id="navigation">
- <div id="menu">
- <ul id="nav">
- <li><a href="#">Главная</a>
- <ul>
-<li><a href="#">Новости</a></li>
-<li><a href="#">Интересно</a>
- <ul>
-<li><a href="#">JavaScript</a></li>
-<li><a href="#">jQuery</a></li>
-<li><a href="#">CSS3</a>
- <ul>
-<li><a href="#">Инофрмация</a></li>
-<li><a href="#">Инструкция</a></li>
-<li><a href="#">Шпаргалки</a>
- <ul>
-<li><a href="#">На русском языке</a></li>
-<li><a href="#">На английском языке</a></li>
-<li><a href="#">На украинском языке</a></li>
- </ul>
- </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
- </li>
- <li><a href="#">Денвер</a>
- <ul>
-<li><a href="#">Информация</a></li>
-<li><a href="#">Как установить сайта</a></li>
-<li><a href="#">Хаки</a>>
- </li>
- </ul>
- </li>
- 
- <li><a href="#">Информация</a>
- <ul>
-<li><a href="#">Полезное</a></li>
-<li><a href="#">Соглашение</a></li>
- </ul>
- </li>
- <li><a href="#">Сервисы</a></li>
- </ul>
-/*====================
- 
-Цветовая схема меню
-===============================*/
-body {
- background: #000000 url(header.jpg) no-repeat center top;
- color: #666;
- font: 14px/18px 'Lato', Arial, sans-serif;
- text-align: justify;
-}
-/* Цвет строки меню */
-#navigation,
-#nav li ul li,
-#nav li ul li a{
-background: #000;
-}
- 
-/* Цвет пункта меню */
-#nav li a,
-#nav li a:hover,
-#nav li ul li,
-#nav li ul li a,
-#nav li ul li a:hover {
-color: #fff;
-}
- 
-/* Цвет при наведении*/
-#nav li a:hover,
-#nav li ul li a:hover {
-background: #9ACD32;
-}
- 
-/* Тени*/
-#nav li a,
-#nav li a:hover,
-#nav li ul li a:hover {
-text-shadow: 0 1px 1px #333;
-}
- 
-/* Цвета формы поиска */
-.searchform input, .searchform input:not(:focus){
-color:#B1B1B1; /*Цвет текста по умолчанию*/
-background: #fff; /*Цвет фона по умолчанию*/
-}
-.searchfield:focus{
-color: #000; /* Цвет текста при нажатии */
-}
- 
-/*=====================================================================
-Пункты отвечающие за фиксацию меню
-====================*/
- 
-#menu_div{
-clear: both;
-position: relative;
-top: 0;
-left: 0;
-}
- 
-#navigation {
-position: fixed;
-}
- 
-#navigation, #menu_div {
-width: 100%;
-margin: 0 !important;
-padding: 0 !important;
-}
- 
-#menu_div, #navigation, #menu, #nav{
-height: 45px; /* Высота меню */
-}
- 
-#menu_div:hover,
-#navigation:hover,
-#nav li a:hover, #nav li ul a
-{
-opacity: 0.95;/* Прозрачность меню при наведении*/
-}
- 
-#menu_div,
-#navigation,
-#nav li a,
-#menu_div:not(:hover),
-#navigation:not(:hover)
-{
-opacity: 0.8;/* Когда убираем курсор мыши */
-}
- 
-#menu {
-width: 960px;
-margin:0 auto; /*Центр меню*/
-padding:0;
-position: relative;
-}
- 
-#nav{
-width: 960px;
-margin:0;
-padding:0;
-position: relative;
-font-family: 'Arial', Helvetica, sans-serif;
-}
- 
-#nav li a,#nav li {
-float:left;
-}
- 
-#nav li {
-list-style:none;
-position:relative;
-}
- 
-#nav li a {
-line-height: 45px;
-padding:0 15px;
-text-decoration:none;
-margin:0;
-font-size:12px;
-font-weight:700;
-text-transform:uppercase;
-}
- 
-/*====================
- Подменю
-=====================*/
-#nav li ul {
-display:none;
-position:absolute;
-left:0;
-top:100%;
-padding:0;
-margin:0;
-} /* Спрятать меню*/
- 
-#nav li:hover > ul {
-display:block;
-} /* Показать подменю при наведении */
- 
-#nav li ul li,#nav li ul li a {
-float:none;
-height: 35px; /* Высота подменю*/
-min-width: 150px; /* Минимальная ширина */
-line-height: 35px;
-border-right: 0;
-text-shadow: none;
-display:block;
-font-size:13px;
-font-weight:400;
-text-transform:inherit;
-}
- 
-#nav li ul li {
-_display:inline; /* Для IE */
-}
- 
-/* == 12. Под-под пункты == */
-#nav li ul li ul {
-display:none;
-}
- 
-#nav li ul li:hover ul {
-left:100%;
-top:0;
-}
- 
-/*====================
- Форма поиска
-====================*/
- 
-.searchform {
-position: absolute;
-right: 15px;
-top: 6px;
-display: inline-block;
-zoom: 1;
-*display: inline;
-border: 0;
-padding: 0;
-}
-.searchform input {
-font: normal 12px/100% Arial, Helvetica, sans-serif;
-}
-.searchform .searchfield {
-height: 27px;
-line-height: 27px;
-padding-left: 10px;
-padding-right: 10px;
-width: 150px;
-border: 2px solid #333;
-outline: none;
--webkit-border-radius: 2em;
--moz-border-radius: 2em;
-border-radius: 2em;
--moz-box-shadow: inset 1px 1px 2px #A1A1A1;
--webkit-box-shadow: inset 1px 1px 2px #A1A1A1;
-box-shadow: inner 1px 1px 2px #A1A1A1;
-}
- 
-.searchfield:focus{
-font-weight: 700;
-width: 220px;
-}
- 
-.searchfield:not(:focus){
-width: 150px;
-}
- 
-/*========================
- Переходы
-========================*/
- 
-#nav li a:hover,
-#nav li ul li a:hover {
--webkit-transition-property:color, background;
--webkit-transition-duration: 0.5s, 0.5s;
--webkit-transition-timing-function: linear, ease-out;
-}
- 
-.searchfield:focus,
-.searchfield:not(:focus){
--webkit-transition-property:width;
--webkit-transition-duration: 0.5s, 0.5s;
--webkit-transition-timing-function: linear, ease-out;
-}
- 
-#menu_div:hover,
-#navigation:hover,
-#nav li ul a,
-#menu_div,
-#navigation,
-#nav li a,
-#menu_div:not(:hover),
-#navigation:not(:hover)
-{
--webkit-transition-property:opacity;
--webkit-transition-duration: 0.5s, 0.5s;
--webkit-transition-timing-function: linear, ease-out;
-}
+    }
+    
+    #menu li a:hover{
+        background: #36c;
+        color: #ff0;
+
+        -webkit-transition-property: color, background;
+        -webkit-transition-duration: 0.5s, 0.5s;
+    }
+    .default {
+        width:920px;
+    }
+    .fixed {
+        position:fixed;
+        top:-5px; left:0;
+        width:100%;
+        padding:10px 0;
+        
+        -moz-box-shadow: 5px 5px 20px #333;
+        -webkit-box-shadow: 5px 5px 20px #333;
+        box-shadow: 5px 5px 20px #333;
+    }
+    .transbg {
+        background-color: rgba(60, 130, 190, 0.7)!important;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        var $menu = $("#menu");
+            
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("default")
+                           .addClass("fixed transbg")
+                           .fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("fixed transbg")
+                           .addClass("default")
+                           .fadeIn('fast');
+                });
+            }
+        });//scroll
+        
+        $menu.hover(
+            function(){
+                if( $(this).hasClass('fixed') ){
+                    $(this).removeClass('transbg');
+                }
+            },
+            function(){
+                if( $(this).hasClass('fixed') ){
+                    $(this).addClass('transbg');
+                }
+            });//hover
+    });//jQuery
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="logo">
+            <h1>Webcomplex</h1>
+        </div>
+        <div id="menu" class="default">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Joolma</a></li>
+                <li><a href="#">WordPress</a></li>
+                <li><a href="#">HTML5&amp;CSS3</a></li>
+                <li><a href="#">PHP</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+</body>
+</html>
