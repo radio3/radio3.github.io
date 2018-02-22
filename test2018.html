@@ -191,22 +191,15 @@
 	    <br>
 	    <br>
 	    <center>NEWS</center>
-	<div id="win">
-   <div class="overlay"></div>
-		<div id="win" style="display:none;">
-			<button onClick="getElementById('win').removeAttribute('style');" type="button">Модальное окно</button>
-      <div class="visible">
-        <h2>Заголовок окна</h2>
-          <div class="content">
-            <p>Содержание</p>
-            <p>Модальное окно фиксированной ширины</p>
-          </div>
-        <button type="button" onClick="getElementById('win').style.display='none';">закрыть</button>
-    </div>
+	<div class="popup_overlay"></div>
+<div class="popup">
+  <div class="popup_title">
+    Заголовок всплывающего окна <span class="closer">X</span>
+  </div>
+  <div class="popup_content">
+    Содержимое всплывающего окна, форма обратной связи или что-то, что вам нужно.
+  </div>
 </div>
-<br>
-<br>
-<br></p>
 	<a id="video"><hr>
 	<br>
 	    <br>
