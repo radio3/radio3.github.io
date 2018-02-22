@@ -191,44 +191,97 @@
 	    <br>
 	    <br>
 	    <center>NEWS</center>
-		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+		<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; Windows-1251">
-<meta name="keywords" content="модальное окно" />
-<meta name="description" content="всплывающие модальные окна" />
- <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>Модальные всплывающие окнa</title>
+<meta charset="UTF-8">
+<title>Всплывающие уведомления</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<style>
+body {
+    margin: 0;
+    background: #CFCFCF;
+    width: 100%;
+}
+button{
+    border: 0;
+    background: red;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+    cursor: pointer;
+    transition: 1s ease;
+    border-radius: 5px;
+    margin-top: 100px;
+    width: 300px;
+    display: block;
+    outline: none;
+}
+button:hover{
+    background: #656565;
+}
+.success{
+    display: none;
+    position: fixed;
+    padding: 20px 20px 20px 50px;
+    background: rgba(246, 246, 246, 0.8);
+    border-radius: 15px;
+    z-index: 10;
+    width: 340px;
+    line-height: 20px;
+}
+.success::before{
+    content: "✓";
+    font-size: 30px;
+    font-family: sarif;
+    float: left;
+    display: block;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(0, 201, 169);
+    margin-right: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.close {
+    margin-left: 10px;
+    height: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+</style>
+<script>
+	jQuery(function($) {
+		$('button').click(function(){
+            $('.success').append('<div class="close">☓</div>');
+            $('.success').fadeIn('slow');
+            $('.success').css('top',($(window).height()-$('.success').outerHeight())/2 + 'px');
+            $('.success').css('left',($(window).width()-$('.success').outerWidth())/2 + 'px');
+            function windowClose(){
+                $('.success').fadeOut('slow');
+            };
+            setTimeout(function(){windowClose()}, 4000);
+            $('.close').click(function(){
+                windowClose();
+            });
+        }); 
+	});
+</script>
 </head>
 <body>
-
-<h2>Модальные всплывающие окна с помощью CSS3 без Javascript</h2>
-<center>
-<!-- Ссылки на вызов моалных окон-->
- <p><a href="#win1" id="win_pop">Открыть модельное окно!</a></p><br/>
-
- <h2>Нажмите на изображение чтобы посмотреть масштабную фотграфию в модальном окне.</h2>
-				
- <p><a href="#win2" id="win_pop"><img title="coloboc" src="imges/coloboc.png" width="128" height="110" alt="coloboc" /></a><p><br/>
-</center>
-
-<!-- Модальное окно №1 -->
-
-        <a href="#x" class="overlay" id="win1"></a>
-        <div class="popup">
-<img src="imges/user.png" width="100" height="102" alt="Веб-приложения" style="float:left;margin:5px 10px 5px 0;" />
-<p>Противостояние жизненно перечеркивает азимут, это довольно часто наблюдается у сверхновых звезд второго типа.
- Параллакс, несмотря на внешние воздействия, отражает центральный экватор, а оценить проницательную способность 
- вашего телескопа поможет следующая формула: Mпр.= 2,5lg Dмм + 2,5lg Гкрат + 4. Спектральный класс, и это следует
- подчеркнуть, гасит вращательный лимб, и в этом вопросе достигнута такая точность расчетов, что, начиная с того 
- дня, как мы видим, указанного Эннием и записанного в "Больших анналах", было вычислено время предшествовавших 
- затмений солнца, начиная с того, которое в квинктильские ноны произошло в царствование Ромула. Угловое расстояние
- иллюстрирует экваториальный возмущающий фактор, это довольно часто наблюдается у сверхновых звезд второго типа.
- Дип-скай объект, после осторожного анализа, притягивает радиант – север вверху, восток слева. Это можно записать
- следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где уравнение времени решает популяционный индекс, однако 
- большинство спутников движутся вокруг своих планет в ту же сторону, в какую вращаются планеты. </p>
-        <a class="close"title="Закрыть" href="#close"></a>
-        </div>
+<button>Нажми меня</button>
+<div class="success">
+Это всплывающее уведомление
+</div>
+</body>
+</html>
 <br>
 <br>
 <br></p>
