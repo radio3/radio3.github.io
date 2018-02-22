@@ -191,91 +191,96 @@
 	    <br>
 	    <br>
 	    <center>NEWS</center>
-		<!DOCTYPE html>
+	<!--
+Урок подготовлен web-студией roothelp.ru
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Всплывающие уведомления</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<style>
-body {
-    margin: 0;
-    background: #CFCFCF;
-    width: 100%;
-}
-button{
-    border: 0;
-    background: red;
-    padding: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    margin: auto;
-    cursor: pointer;
-    transition: 1s ease;
-    border-radius: 5px;
-    margin-top: 100px;
-    width: 300px;
-    display: block;
-    outline: none;
-}
-button:hover{
-    background: #656565;
-}
-.success{
-    display: none;
-    position: fixed;
-    padding: 20px 20px 20px 50px;
-    background: rgba(246, 246, 246, 0.8);
-    border-radius: 15px;
-    z-index: 10;
-    width: 340px;
-    line-height: 20px;
-}
-.success::before{
-    content: "✓";
-    font-size: 30px;
-    font-family: sarif;
-    float: left;
-    display: block;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-weight: 600;
-    color: rgb(0, 201, 169);
-    margin-right: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.close {
-    margin-left: 10px;
-    height: 10px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-</style>
-<script>
-	jQuery(function($) {
-		$('button').click(function(){
-            $('.success').append('<div class="close">☓</div>');
-            $('.success').fadeIn('slow');
-            $('.success').css('top',($(window).height()-$('.success').outerHeight())/2 + 'px');
-            $('.success').css('left',($(window).width()-$('.success').outerWidth())/2 + 'px');
-            function windowClose(){
-                $('.success').fadeOut('slow');
-            
-</script>
+<title>Модальное окно | JavaScript</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
 </head>
 <body>
-<button>Нажми меня</button>
-<div class="success">
-Это всплывающее уведомление
+
+<table class='width onetable'>
+<tr>
+<td>
+<a href='http://www.roothelp.ru'>
+<img class='roothelp_img' src='http://www.roothelp.ru/logo.png'/>
+</a>
+</td>
+<td>
+<p class='rh_webstudia'>
+Урок подготовлен web-студией roothelp.ru, благодарим за внимание!
+</p>
+<p class='rh_title'>
+Модальное окно | JavaScript
+</p>
+</td>
+</tr>
+</table>
+
+<div class='center'>
+<br>
+<table class='width'>
+<tr>
+<td valign='top'>
+
+<div class="text">
+
+<script>
+//передача элементов по id "a" и "b"
+window.onload = function()
+{
+a = document.getElementById("a");
+b = document.getElementById("b");
+} 
+
+//показываем окно функции "showA"
+function showA()
+{
+//Задаем прозрачность и блокируем дисплей
+//элемента "b"
+b.style.filter = "alpha(opacity=80)";
+b.style.opacity = 0.8;
+b.style.display = "block";
+// Задаем блокироваку и отступ сверху в 200px
+//элемента "a"
+a.style.display = "block";
+a.style.top = "200px";
+}
+
+//Вызываем функцию "hideA", которая будет скрывать окно
+//для элементов "a" и "b"
+function hideA()
+{
+b.style.display = "none";
+a.style.display = "none";
+}      
+</script>
+
+<a href="#" onclick="showA();" class="pages">Открыть</a>
+
+<div id="a"><div id="windows">
+<!-- Ваш текст -->
+<a href="#" onclick="hideA();" class="pages" 
+style="float: right;">Закрыть</a>
+</div></div>
+<div id="b"></div>
+
 </div>
+
+</td>
+</tr>
+</table>
+</div>
+
 </body>
 </html>
+
+
+
 <br>
 <br>
 <br></p>
