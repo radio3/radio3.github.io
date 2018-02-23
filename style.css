@@ -77,7 +77,7 @@ body{
     background: #fefefe;
     border: #555555 solid 1px;
     border-radius: 5px;
-    position: auto;
+    position: 100px;
     left: 50%;
     top: -100%;
     -webkit-transform: translate(-50%, -500%);
