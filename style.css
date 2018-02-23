@@ -89,7 +89,7 @@ body{
     -o-transition: -o-transform 0.4s ease-out;
     transition: transform 0.4s ease-out;
     width: 80%;
-    max-width: 500px;
+    max-width: 5000px;
     z-index: 103;
 }
 .modal-body {
