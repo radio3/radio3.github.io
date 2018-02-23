@@ -21,7 +21,7 @@ body{
 /* Стили модального окна */
 .modal-header h2 {
     color: #555;  
-    font-size: 20px;
+    font-size: 100px;
     font-weight: normal;
     line-height: 1;    
     margin: 0;
