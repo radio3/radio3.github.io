@@ -192,135 +192,89 @@
 	    <br>
 	    <center>NEWS</center>
 	
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<title>Пример нескольких модальных окон на jQuery </title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<style type="text/css">
-/* Окна */
-.modal_div {
-	width: 300px; 
-	height: 300px; /* Размеры должны быть фиксированы */
-	border-radius: 5px;
-	border: 3px #000 solid;
-	background: #fff;
-	position: fixed; /* чтобы окно было в видимой зоне в любом месте */
-	top: 45%; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
-	left: 50%; /* половина экрана слева */
-	margin-top: -150px;
-	margin-left: -150px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты соответственно =) */
-	display: none; /* в обычном состоянии окна не должно быть */
-	opacity: 0; /* полностью прозрачно для анимирования */
-	z-index: 5; /* окно должно быть наиболее большем слое */
-	padding: 20px 10px;
-}
-/* Кнопка закрыть для тех кто в танке) */
-.modal_close {
-	width: 21px;
-	height: 21px;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	cursor: pointer;
-	display: block;
-}
-/* Подложка */
-#overlay {
-	z-index: 3; /* подложка должна быть выше слоев элементов сайта, но ниже слоя модального окна */
-	position: fixed; /* всегда перекрывает весь сайт */
-	background-color: #000; /* черная */
-	opacity: 0.8; /* но немного прозрачна */
-	width: 100%; 
-	height: 100%; /* размером во весь экран */
-	top: 0; 
-	left: 0; /* сверху и слева 0, обязательные свойства! */
-	cursor: pointer;
-	display: none; /* в обычном состоянии её нет) */
-}
-</style>
-<script type="text/javascript">
-$(document).ready(function() { // запускаем скрипт после загрузки всех элементов
-    /* засунем сразу все элементы в переменные, чтобы скрипту не приходилось их каждый раз искать при кликах */
-    var overlay = $('#overlay'); // подложка, должна быть одна на странице
-    var open_modal = $('.open_modal'); // все ссылки, которые будут открывать окна
-    var close = $('.modal_close, #overlay'); // все, что закрывает модальное окно, т.е. крестик и оверлэй-подложка
-    var modal = $('.modal_div'); // все скрытые модальные окна
-
-     open_modal.click( function(event){ // ловим клик по ссылке с классом open_modal
-         event.preventDefault(); // вырубаем стандартное поведение
-         var div = $(this).attr('href'); // возьмем строку с селектором у кликнутой ссылки
-         overlay.fadeIn(400, //показываем оверлэй
-             function(){ // после окончания показывания оверлэя
-                 $(div) // берем строку с селектором и делаем из нее jquery объект
-                     .css('display', 'block') 
-                     .animate({opacity: 1, top: '50%'}, 200); // плавно показываем
-         });
-     });
-
-     close.click( function(){ // ловим клик по крестику или оверлэю
-            modal // все модальные окна
-             .animate({opacity: 0, top: '45%'}, 200, // плавно прячем
-                 function(){ // после этого
-                     $(this).css('display', 'none');
-                     overlay.fadeOut(400); // прячем подложку
-                 }
-             );
-     });
-});
-</script>
+    <meta charset="UTF-8">
+    <title>Демо: Модальное окно на HTML5, CSS3 и скрытых чекбоксах</title>
+    <meta name="description" content="Пример создания всплывающего модального окна на скрытых чекбоксах, исключительно средствами CSS3 и HTML5" />
+    <meta name="keywords" content="модальное окно, html5, css3, checkbox, демо" />
+	<meta name="author" content="Dobrovoimaster" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+       a {
+       color: #96443c;
+       text-decoration: none;
+       }
+    </style>
 </head>
 <body>
-<center><p><a href="#modal4" <font size="+3"> Т.Б. Ершова: Спасибо за добросовестный труд!"</font></a></p>
-	Глава города Щёлково Т.Б. Ершова наградила Антона Бутовца Благодарственным письмом за добросовестный плодотворный труд и высокий профессионализм в работе.
-<p><a href="#modal3" class="open_modal">Ссылка с окном 3</a></p>
-<p><a href="#modal2" class="open_modal">Ссылка с окном 2</a></p>
-<p><a href="#modal1" class="open_modal">Ссылка с окном 1</a></p></center>	
-
-
-<!-- Модальные окна -->
-<div id="modal1" class="modal_div">
-	<span class="modal_close">X</span>
-		<form action="" method="post">
-			<h3>Простое модальное окно 1</h3>
-			<p>Тут может быть рандомная обычная форма например.</p>
-	
-		</form>
+<div class="demo">
+    <label title="Стандартное модальное окно" class="btn" for="modal-1">Пример 1</label>&nbsp;&nbsp;<label title="Контактная форма в модальном окне" class="btn" for="modal-2">Пример 2</label>&nbsp;&nbsp;<label title="Изображения в модальном окне" class="btn" for="modal-3">Пример 3</label>
+</div>
+<!-- Modal One -->
+<div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Модальное окно на CSS! :-)</h2>
+        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <p>Это всего лишь один небольшой пример :D</p>
+      </div>
+      <div class="modal-footer">
+        <label class="btn btn-primary" for="modal-1">Отлично!</label>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div id="modal2" class="modal_div">
-	<span class="modal_close">X</span>
-		<form action="" method="post">
-			<h3>Простое модальное окно 2</h3>
-			<p>Тут может быть рандомная обычная форма например.</p>
-			
-			</p>
-		</form>
+<!-- Modal Two -->
+<div class="modal">
+  <input class="modal-open" id="modal-2" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-2"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Форма в Модальное окно! :)</h2>
+        <label class="btn-close" for="modal-2" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+          <form>
+	         <input name="name" placeholder="* Укажите ваше имя" class="textbox" required />
+	         <input name="emailaddress" placeholder="* Укажите ваш Email" class="textbox" type="email" required />
+             <textarea rows="4" cols="50" name="subject" placeholder="* Введите ваше сообщение:" class="message" required></textarea>
+              <input name="submit" class="btn btn-form" type="submit" value="Отправить" />
+          </form>
+      </div>
+    </div>
+  </div>
 </div>
-<div id="modal3" class="modal_div">
-	<span class="modal_close">X</span>
-		<form action="" method="post">
-			<h3>Простое модальное окно 3</h3>
-			<p>Тут может быть рандомная обычная форма например.</p>
-			
-			</p>
-		</form>
+    
+<!-- Modal Three -->
+<div class="modal">
+  <input class="modal-open" id="modal-3" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-3"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Картинка в Модальное окно! :-)</h2>
+        <label class="btn-close" for="modal-3" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <img src="http://dbmast.ru/files/lightbox-css3/img/img4.jpg">
+      </div>
+      <div class="modal-footer">
+        <label class="btn btn-primary" for="modal-3">Отлично!</label>
+      </div>
+    </div>
+  </div>
 </div>
-		<div id="modal4" class="modal_div">
-	<span class="modal_close">X</span>
-		<form action="" method="post"
-			<h3>Простое модальное окно 4</h3>
-			<p>Тут может быть рандомная обычная форма например.</p>
-			
-			</p>
-		</form>
-</div>
-
-
-
-<!-- Подложка только одна -->
-<div id="overlay"></div>
-
+<p style="text-align: center;">сделано с любовью: <a href="http://twitter.com/dobrovoi">@dobrovoi</a></p>
+<p style="text-align: center;"><a href="http://dbmast.ru/modalnoe-okno-na-html5-css3-i-skrytyh-chekboksah">&laquo;&laquo; Изучить детали</a></p>
 </body>
 </html>
 	<a id="video"><hr>
