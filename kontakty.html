@@ -1,167 +1,167 @@
-<lj-like />
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE HTML>
 <head>
-<title>Радио "Навайя"</title>
-<style>
-body{
-background-image:url('fon.jpg');
-background-color:#FFRRFF;
-max-width:1000px;
-padding:0px;
-margin:0px auto;
-}
-</style> 
-</head>
-<body>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Lynx_Lynx" />
 
-
-
-
-
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<link href="http://www.xiper.net/examples/css/examples.css" rel="stylesheet" type="text/css" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-
-<script type="text/javascript">
-jQuery(document).ready(function(){
-
-/* функция кроссбраузерного определения отступа от верха документа к текущей позиции скроллера прокрутки */
-function getScrollTop() {
-           var scrOfY = 0;
-           if( typeof( window.pageYOffset ) == "number" ) {
-                   //Netscape compliant
-                   scrOfY = window.pageYOffset;
-           } else if( document.body
-           && ( document.body.scrollLeft
-           || document.body.scrollTop ) ) {
-                   //DOM compliant
-                   scrOfY = document.body.scrollTop;
-           } else if( document.documentElement
-           && ( document.documentElement.scrollLeft
-            || document.documentElement.scrollTop ) ) {
-                   //IE6 Strict
-                   scrOfY = document.documentElement.scrollTop;
-           }
-           return scrOfY;
-}
-
-jQuery(window).scroll(function() {
-	fixPaneRefresh();
-});
-
-function fixPaneRefresh(){
-	if (jQuery("#fixedBox").length) {
-		var top  = getScrollTop();
-        if (top < 18) jQuery("#fixedBox").css("margin-top",18-top+"px");
-        else jQuery("#fixedBox").css("margin-top","0");
-	}
-}
-
-});
-
-
-
-
-</script>
-
-
-
-<style type="text/css">
-<!--
-.main {
-	width: 1000px;
-	margin: 0 auto;
-
-}
-.header {
-	height: 0 auto;
-	background-color: #C5E4ED;
-}
-.content {
-	height: 20px;
-}
-#fixedBox {
-	font-size: 16px;
-	text-align: center;
-	border-top: 1px solid #539127;
-	border-bottom: 1px solid #539127;
-	height: 50px;
-	line-height: 50px;
-	background-color: #E8F8FC;
-	width: 1000px;
-	position: fixed;
-	/* отступ сверху */
-	margin-top: 16px;
-}
--->
+	<title>Радио "Навайя"</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+ <style>
+ /*demo page style*/
+    body {background: #f0f0f0;}
+    h1{
+    	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+    	text-shadow:0 1px 1px black;
+  
+    	/* The logo text */
+    	font-size:3.5em;
+    	padding:0.5em 0 0;
+    	text-transform:uppercase;
+        margin:0; padding:0;
+    }
+    
+    p {line-height:1.5em; padding-bottom:1em;}
+    
+    #wrapper {
+        width:920px;
+        margin:0 auto;
+        padding: 0;
+    }
+    
+    #header {height: 150px;}
+    
+    #logo {height: 100px;}
+    
+/*main menu*/
+    #menu {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 50px;
+        background: #69c;
+        
+        text-shadow:0 1px 1px black;
+       -moz-border-radius: 5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+    #menu ul {padding:0; margin:0;}
+    #menu li{
+        display: inline;
+        list-style:none;
+        margin: 5px 10px;
+    }
+    
+    #menu li a {
+        padding:5px 10px;
+        color:#fff;
+        text-decoration: none;
+        
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    
+    #menu li a:hover{
+        background: #36c;
+        color: #ff0;
+        -webkit-transition-property: color, background;
+        -webkit-transition-duration: 0.5s, 0.5s;
+    }
+    .default {
+        width:920px;
+    }
+    .fixed {
+        position:fixed;
+        top:-5px; left:0;
+        width:100%;
+        padding:10px 0;
+        
+        -moz-box-shadow: 5px 5px 20px #333;
+        -webkit-box-shadow: 5px 5px 20px #333;
+        box-shadow: 5px 5px 20px #333;
+    }
+    .transbg {
+        background-color: rgba(60, 130, 190, 0.7)!important;
+    }
 </style>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        var $menu = $("#menu");
+            
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("default")
+                           .addClass("fixed transbg")
+                           .fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("fixed transbg")
+                           .addClass("default")
+                           .fadeIn('fast');
+                });
+            }
+        });//scroll
+        
+        $menu.hover(
+            function(){
+                if( $(this).hasClass('fixed') ){
+                    $(this).removeClass('transbg');
+                }
+            },
+            function(){
+                if( $(this).hasClass('fixed') ){
+                    $(this).addClass('transbg');
+                }
+            });//hover
+    });//jQuery
+</script>
 </head>
 
 <body>
-<div class="main">
-		
-		<div id="fixedBox">
-			<font size="+4"><font face="Monotype Corsiva"> <a href="index.html"style="text-decoration: none; color:black;">Радио "Навайя"</a> </font></font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link1"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';">  <font face="Tahoma"><font size="+1,6">О НАС </font></font> </font></a> &nbsp; &nbsp;<a href="#link2"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">ЭФИР </font></font></font></a> &nbsp; &nbsp;<a href="#link3"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">НОВОСТИ </font></font></font></a> &nbsp; &nbsp;<a href="#link4"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">ВИДЕО </font></font></font></a> &nbsp; &nbsp;<a href="#link5"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">РАСПИСАНИЕ </font></font></font></a> &nbsp; &nbsp;<a href="#link6"style="text-decoration: none; color:black;"><font onmouseover="style.backgroundColor='pink'; style.cursor='hand'" onMouseOut="style.backgroundColor='#E8F8FC';"> <font face="Tahoma"><font size="+1,6">КОНТАКТЫ </font></font></font></a>
-		</div>
-	</div>
-	<div class="content">
-	</div>
-</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-5053168-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-</body>
-</html>
-
-<br>
-<br>
-<br>
-<br>
-<center><img src="wsJ16ohUHY8.jpg"></center>	
-<br>
-<a id="link1"><hr>	
-<br>
-<br>	
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">OUR STORY</font> </font> </font></center>
-<br>	
-<font size="+1,5"> <font face="Tahoma"> &nbsp; &nbsp; &nbsp; &nbsp;Радио «Навайя» - проект музыканта, поэта и журналиста Антона Ц. Все 24 часа в сутки в эфире звучат беседы с интересными людьми, репортажи с различных культурных мероприятий, проходящих в Москве и Подмосковье (вернисажей, выставок, концертов, творческих вечеров, презентаций), новости культуры, авторская музыка и песни в исполнении как самого Антона Ц, так и его друзей, соратников и других достойных и талантливых артистов. 
-
-<br> &nbsp; &nbsp; &nbsp; &nbsp;«К Слову» - литературный радио-альманах, где гостями студии радио «Навайя» являются поэты – члены Щёлковского районного литературного объединения «Слово». Это ветераны клуба, стоявшие у истоков его создания, а также молодые участники объединения, свершающие лишь первые шаги на пути к признанию и славе. Беседы ведутся в преддверии 60- летия лито. 
-
-<br> &nbsp; &nbsp; &nbsp; &nbsp;Программа «Архитектура XX века» - проект, реализованный совместно с Щёлковским историко-краеведческим музеем. Антон Ц ведёт беседы со своими гостями как об архитектуре прошлого столетия применительно к Щёлковскому району Московской области (малой Родине автора и экспертов программы), так и в целом, об истории таких архитектурных методов и стилей как конструктивизм, модерн, сталинский ампир, современных новшествах в этой сфере и многом другом. Участники программы – это профессиональные строители, архитекторы, дизайнеры и художники. Один из постоянных соавторов передачи – кандидат архитектуры, преподаватель МАРХИ Алексей Воробьёв. 
-
-<br> &nbsp; &nbsp; &nbsp; &nbsp;«Искусство видеть мир» - рубрика, в которой её автор и ведущий Антон Ц рассказывает о творческих людях и их судьбах. Героями очередного выпуска могут быть музыканты, художники, актёры, режиссёры, искусствоведы – люди, для которых искусство является неотъемлемой частью жизни. 
-
-<br> &nbsp; &nbsp; &nbsp; &nbsp;Радио «Навайя» - волна для тех, кто хочет чувствовать себя истинным эстетом. Слушайте и насыщайтесь! Открывайте ранее неведомые миры, постигайте новое каждый день! Умейте любить жизнь и по-настоящему наслаждаться каждым её мгновением!</font></font>  
-<br>
-<br>
-<br>      
-<a id="link2"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">LIVE</font> </font> </font></center>	
-<br>
-<br>
-<table width=100%>
+<div id="wrapper">
+    <div id="header">
+        <div id="logo">
+            <h1>Радио "Навайя"</h1>
+        </div>
+        <div id="menu" class="default">
+            <ul>
+                <li><a href="#story">О НАС</a></li>
+                <li><a href="#live">ЭФИР</a></li>
+                <li><a href="#news">НОВОСТИ</a></li>
+                <li><a href="#video">ВИДЕО</a></li>
+                <li><a href="#shedule">РАСПИСАНИЕ</a></li>
+		<li><a href="#contact">КОНТАКТЫ</a></li>    
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+	    <a id="story"><hr>
+	    <br>
+	    <br>
+	    <br>
+	    <center>OUR STORY</center>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Радио «Навайя» - проект музыканта, поэта и журналиста Антона Ц. Все 24 часа в сутки в эфире звучат беседы с интересными людьми, репортажи с различных культурных мероприятий, проходящих в Москве и Подмосковье (вернисажей, выставок, концертов, творческих вечеров, презентаций), новости культуры, авторская музыка и песни в исполнении как самого Антона Ц, так и его друзей, соратников и других достойных и талантливых артистов. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;«К Слову» - литературный радио-альманах, где гостями студии радио «Навайя» являются поэты – члены Щёлковского районного литературного объединения «Слово». Это ветераны клуба, стоявшие у истоков его создания, а также молодые участники объединения, свершающие лишь первые шаги на пути к признанию и славе. Беседы ведутся в преддверии 60- летия лито. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Программа «Архитектура XX века» - проект, реализованный совместно с Щёлковским историко-краеведческим музеем. Антон Ц ведёт беседы со своими гостями как об архитектуре прошлого столетия применительно к Щёлковскому району Московской области (малой Родине автора и экспертов программы), так и в целом, об истории таких архитектурных методов и стилей как конструктивизм, модерн, сталинский ампир, современных новшествах в этой сфере и многом другом. Участники программы – это профессиональные строители, архитекторы, дизайнеры и художники. Один из постоянных соавторов передачи – кандидат архитектуры, преподаватель МАРХИ Алексей Воробьёв. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;«Искусство видеть мир» - рубрика, в которой её автор и ведущий Антон Ц рассказывает о творческих людях и их судьбах. Героями очередного выпуска могут быть музыканты, художники, актёры, режиссёры, искусствоведы – люди, для которых искусство является неотъемлемой частью жизни. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Радио «Навайя» - волна для тех, кто хочет чувствовать себя истинным эстетом. Слушайте и насыщайтесь! Открывайте ранее неведомые миры, постигайте новое каждый день! Умейте любить жизнь и по-настоящему наслаждаться каждым её мгновением! </p>
+      <a id="live"> <hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>LIVE</center>
+	<p><table width=100%>
 <tr><td width=50%>
 <font size="+2,5"><font face="Tahoma"><b>Online-вещание:</b></font></font> 
 <br>
 <br>	
-<iframe src="https://myownradio.biz/widget/?stream_id=321" width="350" height="350"></iframe>
+<iframe src="https://myownradio.biz/widget/?stream_id=356" width="350" height="350"></iframe>
 <td width=50%>
 <br>	
 <a href="https://myownradio.biz/content/m3u/navaja.m3u"><br><font size="+2,3"> <font face="Tahoma"><font color="Black">Слушать радио "Навайя" в своём медиа-плеере >> </font> </font> </font></a>
@@ -183,14 +183,13 @@ pageTracker._trackPageview();
 </table>	
 <br>
 <br>
-<br>      
-<a id="link3"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">NEWS</font> </font> </font></center>	
-<br>
-<br>
-<script>
+<br></p>
+	<a id="news"><hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>NEWS</center>
+        <p><script>
 var show;
 function hidetxt(type){
  param=document.getElementById(type);
@@ -201,7 +200,6 @@ function hidetxt(type){
  }else param.style.display = "none"
 }
 </script>
-
 	
 <center>
 <font color="fuchsia"><font size="+3">Т.Б. Ершова: Спасибо за добросовестный труд!"</font></font>
@@ -277,12 +275,13 @@ function hidetxt(type){
 </div></center>	
 <br>
 <br>
-<br>      
-<a id="link4"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">VIDEO</font> </font> </font></center>	
-<br>
+<br></p>
+	<a id="video"><hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>VIDEO</center>
+        <p><br>
 <br>	
   &nbsp; &nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/162183318?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  <iframe src="https://player.vimeo.com/video/162190612?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -297,22 +296,19 @@ function hidetxt(type){
 <iframe src="https://player.vimeo.com/video/169346555?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <br>
 <br>
-<br>      
-<a id="link5"><hr size=9 color="#FF0000">
-<br>
-<br>
-	<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">SHEDULE</font> </font> </font></center>	
-<br>
-<br>
-
-<br>
-<br>
-<br>      
-<a id="link6"><hr size=9 color="#FF0000">
-<br>
-<br>
-<center><font size="+3,3"> <font face="Tahoma"><font color="fuchsia">CONTACT</font> </font> </font></center>	
-<br>
+<br> </p>
+	<a id="shedule"><hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>SHEDULE</center>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a id="contact"> <hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>CONTACT</center>
+	<p><br>
 <br>
 <center>По вопросам сотрудничества, рекламы и предложений
 <br>
@@ -323,15 +319,12 @@ function hidetxt(type){
 <br>
 <br>
 <center><img src="SrMtm1vd7Lw.jpg"></center>	
-<br>
-<hr size=9 color="#FF0000">
-<br>
-<br>
-<br>
-<br>	
- <center>2017 © Все права защищены</center> 			
-<br>	
-<br>	
-<br>
+<br></p>
+       <hr>
+	<center>2018 © Все права защищены</center>
+    </div>
+</div>
+</body>
+</html>
 <br>
 <br>
