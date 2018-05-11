@@ -1,1 +1,331 @@
 
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Lynx_Lynx" />
+
+	<title>Радио "Навайя"</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+ <style>
+ /*demo page style*/
+    body {background: #f0f0f0;}
+    h1{
+    	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+    	text-shadow:0 1px 1px black;
+  
+    	/* The logo text */
+    	font-size:3.5em;
+    	padding:0.5em 0 0;
+    	text-transform:uppercase;
+        margin:0; padding:0;
+    }
+    
+    p {line-height:1.5em; padding-bottom:1em;}
+    
+    #wrapper {
+        width:920px;
+        margin:0 auto;
+        padding: 0;
+    }
+    
+    #header {height: 150px;}
+    
+    #logo {height: 100px;}
+    
+/*main menu*/
+    #menu {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 50px;
+        background: #69c;
+        
+        text-shadow:0 1px 1px black;
+       -moz-border-radius: 5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+    #menu ul {padding:0; margin:0;}
+    #menu li{
+        display: inline;
+        list-style:none;
+        margin: 5px 10px;
+    }
+    
+    #menu li a {
+        padding:5px 10px;
+        color:#fff;
+        text-decoration: none;
+        
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    
+    #menu li a:hover{
+        background: #36c;
+        color: #ff0;
+        -webkit-transition-property: color, background;
+        -webkit-transition-duration: 0.5s, 0.5s;
+    }
+    .default {
+        width:920px;
+    }
+    .fixed {
+        position:fixed;
+        top:-5px; left:0;
+        width:100%;
+        padding:10px 0;
+        
+        -moz-box-shadow: 5px 5px 20px #333;
+        -webkit-box-shadow: 5px 5px 20px #333;
+        box-shadow: 5px 5px 20px #333;
+    }
+    .transbg {
+        background-color: rgba(60, 130, 190, 0.7)!important;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        var $menu = $("#menu");
+            
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("default")
+                           .addClass("fixed transbg")
+                           .fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("fixed transbg")
+                           .addClass("default")
+                           .fadeIn('fast');
+                });
+            }
+        });//scroll
+        
+        $menu.hover(
+            function(){
+                if( $(this).hasClass('fixed') ){
+                    $(this).removeClass('transbg');
+                }
+            },
+            function(){
+                if( $(this).hasClass('fixed') ){
+                    $(this).addClass('transbg');
+                }
+            });//hover
+    });//jQuery
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="logo">
+            <h1>Радио "Навайя"</h1>
+        </div>
+        <div id="menu" class="default">
+            <ul>
+                <li><a href="#story">О НАС</a></li>
+                <li><a href="#live">ЭФИР</a></li>
+                <li><a href="#news">НОВОСТИ</a></li>
+                <li><a href="#video">ВИДЕО</a></li>
+                <li><a href="#shedule">РАСПИСАНИЕ</a></li>
+		<li><a href="#contact">КОНТАКТЫ</a></li>    
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+	    <a id="story"><hr>
+	    <br>
+	    <br>
+	    <br>
+	    <center>OUR STORY</center>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Радио «Навайя» - проект музыканта, поэта и журналиста Антона Ц. Все 24 часа в сутки в эфире звучат беседы с интересными людьми, репортажи с различных культурных мероприятий, проходящих в Москве и Подмосковье (вернисажей, выставок, концертов, творческих вечеров, презентаций), новости культуры, авторская музыка и песни в исполнении как самого Антона Ц, так и его друзей, соратников и других достойных и талантливых артистов. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;«К Слову» - литературный радио-альманах, где гостями студии радио «Навайя» являются поэты – члены Щёлковского районного литературного объединения «Слово». Это ветераны клуба, стоявшие у истоков его создания, а также молодые участники объединения, свершающие лишь первые шаги на пути к признанию и славе. Беседы ведутся в преддверии 60- летия лито. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Программа «Архитектура XX века» - проект, реализованный совместно с Щёлковским историко-краеведческим музеем. Антон Ц ведёт беседы со своими гостями как об архитектуре прошлого столетия применительно к Щёлковскому району Московской области (малой Родине автора и экспертов программы), так и в целом, об истории таких архитектурных методов и стилей как конструктивизм, модерн, сталинский ампир, современных новшествах в этой сфере и многом другом. Участники программы – это профессиональные строители, архитекторы, дизайнеры и художники. Один из постоянных соавторов передачи – кандидат архитектуры, преподаватель МАРХИ Алексей Воробьёв. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;«Искусство видеть мир» - рубрика, в которой её автор и ведущий Антон Ц рассказывает о творческих людях и их судьбах. Героями очередного выпуска могут быть музыканты, художники, актёры, режиссёры, искусствоведы – люди, для которых искусство является неотъемлемой частью жизни. 
+       <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Радио «Навайя» - волна для тех, кто хочет чувствовать себя истинным эстетом. Слушайте и насыщайтесь! Открывайте ранее неведомые миры, постигайте новое каждый день! Умейте любить жизнь и по-настоящему наслаждаться каждым её мгновением! </p>
+      <a id="live"> <hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>LIVE</center>
+	<p><table width=100%>
+<tr><td width=50%>
+<font size="+2,5"><font face="Tahoma"><b>Online-вещание:</b></font></font> 
+<br>
+<br>	
+<iframe src="https://myownradio.biz/widget/?stream_id=356" width="350" height="350"></iframe>
+<td width=50%>
+<br>	
+<a href="https://myownradio.biz/content/m3u/navaja.m3u"><br><font size="+2,3"> <font face="Tahoma"><font color="Black">Слушать радио "Навайя" в своём медиа-плеере >> </font> </font> </font></a>
+<br>
+<br>	
+<i>(WinAmp, Windows Media Player, RealOne Player и другие)</i>	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>	
+<br>	
+<font size="+2,7"><font face="Tahoma">Мы в социальных сетях:<font face="Tahoma"></font>
+<br>	
+<img src="fb.png"><img src="tw.png"><img src="yt.png"><img src="vk.png">
+</table>	
+<br>
+<br>
+<br></p>
+	<a id="news"><hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>NEWS</center>
+        <p><script>
+var show;
+function hidetxt(type){
+ param=document.getElementById(type);
+ if(param.style.display == "none") {
+ if(show) show.style.display = "none";
+ param.style.display = "block";
+ show = param;
+ }else param.style.display = "none"
+}
+</script>
+	
+<center>
+<font color="fuchsia"><font size="+3">Т.Б. Ершова: Спасибо за добросовестный труд!"</font></font>
+<br>
+<br>
+<div>
+<a onclick="hidetxt('div1'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Глава города Щёлково Т.Б. Ершова наградила Антона Бутовца Благодарственным письмом за добросовестный плодотворный труд и высокий профессионализм в работе.</font> </a>
+<div style="display:none;" id="div1">
+<img src="1111.jpeg">
+</div>
+</div>
+<br>
+<br>
+<hr>	
+<font color="fuchsia"><font size="+3">Д.В. Саблин: "Благодарю Вас за очень важную работу!"</font></font>	
+<br>
+<br>
+<div>
+<a onclick="hidetxt('div2'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Депутат Государственной думы РФ, Первый заместитель председателя комитета ГД РФ по делам Содружества Независимых Государств и связям с соотечественниками Дмитрий Саблин поздравил Антона Бутовца с Днём защитника Отечества:</font></a>
+<div style="display:none;" id="div2">
+<br>
+<font size="+1"><centr>Уважаемый Антон Александрович!</centr><font>
+<br> 
+<font size="+1"><div align=left>&nbsp;&nbsp;&nbsp;&nbsp;«Маяковский в своё время произнёс крылатую фразу: «Я хочу, чтоб к штыку прировняли перо». В этой короткой строчке – мысль, отразившая судьбу нескольких поколений отечественной журналистики. Тех, кто на передовой писал заметки для дивизионных газет, а потом брал винтовку и поднимался в атаку, защищая столицу. Тех, кто рассказывал нам о судьбе солдат, водивших караваны грузовиков в Афганистане. И тех, кто сегодня защищает интересы наших граждан – жителей наших городов и районов – освещая самые острые вопросы современной российской действительности. Ибо эта работа тоже требует и таланта, и решительности, и зачастую – настоящего мужества.
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;От всей души благодарю Вас за публикацию материалов, посвящённых моей работе: о деятельности Государственной Думы, депутатских приёмных, о проблемах самых незащищённых групп населения. На эти темы нелегко говорить, их трудно публиковать. И тем важнее работа, которую Вы делаете!
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;Желаю Вам профессиональных успехов, личного благополучия, и удачи во всех начинаниях!»</div> </font> 
+ 
+                                                                                                                                                                       <div align=right>23 февраля 2013 г.</div>
+</div>
+</div>
+<br>
+<br>
+<hr>	
+<font color="fuchsia"><font size="+3">Антона Бутовца наградили в Кремле</font></font> 	
+<br>
+<br>
+<div>
+<a onclick="hidetxt('div3'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Щелковские журналисты стали обладателями премий в конкурсе «Я люблю Россию».</font></a>
+<div style="display:none;" id="div3">
+<font size="+1"><div align=left>&nbsp;&nbsp;&nbsp;&nbsp;Корреспонденты отдела радиовещания Щелковского информагентства вошли в число победителей шестого открытого Межрегионального фестиваля-конкурса пишущей братии «Я люблю Россию».
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Награждение состоялось на прошлой неделе в государственном Кремлевском дворце. В конкурсе приняли участие журналисты печатных, радио и телередакций со всей России – из Калининграда, Иркутска, Севастополя и других городов.
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;Щелковское радио стало победителем сразу в двух номинациях: «Гражданская позиция журналиста» за сюжет «Готовься служить» Михаила Налетова о проблеме недобора призывников в армию.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;В номинации «Память сердца» в числе лучших отмечен радиоочерк Антона Бутовца о народном учителе России В. Н. Чепурове.</div>
+<br> 
+<div align=right>гезета "Ежедневные новости. Подмосковье" от 20 декабря 2011 г.</div></font>
+</div>
+</div>
+<br>
+<br>
+<hr>	
+<font color="fuchsia"><font size="+3">В поиске важного и доброго</font></font>	
+<br>
+<br>
+<div>
+<a onclick="hidetxt('div4'); return false;" href="#" rel="nofollow"style="text-decoration: none; color:purple;"><font size="+1">Корреспонденты отдела радиовещания Щелковского информагентства вошли в число победителей шестого открытого межрегионального фестиваля-конкурса «Я люблю Россию».</font></a>
+<div style="display:none;" id="div4">
+<br>
+<font size="+1"><div align=left>&nbsp;&nbsp;&nbsp;&nbsp;Награждение состоялось 13 декабря в Государственном Кремлевском дворце в День святого апостола Андрея Первозванного. В конкурсе приняли участие журналисты печатных, радиои телередакций со всей России – из Калининграда, Удмуртии, Иркутска, Севастополя и других городов. Устроителями выступили Центр национальной славы и фонд, носящий имя святого апостола, при финансовой поддержке ОАО «РЖД».
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Щелковское радио стало победителем сразу в двух номинациях: в «Гражданской позиции журналиста» за сюжет «Готовься служить» Михаила Налетова о проблеме недобора призывников в армию и в «Памяти сердца» за радиоочерк Антона Бутовца о народном учителе России В.Н. Чепурове.
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;Гран-при конкурса увезла журналист Воткинской рабочей газеты «Трудовая вахта» Республики Удмуртия Татьяна Любивая – за серию публикаций, рассказывающих о вкладе в космическую отрасль коллектива завода.
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;Подводя итоги, президент центра Сергей Шеблыгин отметил: «Журналисты в поиске информации не всегда ориентируются на важное и доброе, забывая об ответственности за страну, за нравственный климат, за будущее детей. Те, кто сегодня получил награды, такие усилия, несомненно, предпринимают».</div>
+<br> 
+<div align=right>гезета "Время" от 21 декабря 2011 г.</div></font> 
+</div>
+</div></center>	
+<br>
+<br>
+<br></p>
+	<a id="video"><hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>VIDEO</center>
+        <p><br>
+<br>	
+  &nbsp; &nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/162183318?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ <iframe src="https://player.vimeo.com/video/162190612?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/162200764?byline=0&portrait=0" width="440" height="226" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/169352234?byline=0&portrait=0" width="440" height="226" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/173988293?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/216283503?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://player.vimeo.com/video/174003137?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/169346555?byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<br>
+<br>
+<br> </p>
+	<a id="shedule"><hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>SHEDULE</center>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a id="contact"> <hr>
+	<br>
+	    <br>
+	    <br>
+	    <center>CONTACT</center>
+	<p><br>
+<br>
+<center>По вопросам сотрудничества, рекламы и предложений
+<br>
+пишите на нашу электронную почту: 
+<br>
+<br>
+	<font size="+3">navajamusic@gmail.com</font></center>	
+<br>
+<br>
+<center><img src="SrMtm1vd7Lw.jpg"></center>	
+<br></p>
+       <hr>
+	<center>2018 © Все права защищены</center>
+    </div>
+</div>
+</body>
+</html>
+<br>
+<br>
