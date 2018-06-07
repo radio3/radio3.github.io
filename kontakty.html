@@ -335,6 +335,29 @@
 </head>
 <body>
 
+<h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px;">В поиске важного и доброго</h1>
+<div class="container">
+    <div style="text-align: center;">
+        <a href="#openModal">Корреспонденты отдела радиовещания Щелковского информагентства вошли в число победителей шестого открытого межрегионального фестиваля-конкурса «Я люблю Россию».</a>
+    </div>
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">В поиске важного и доброго</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                    Корреспонденты отдела радиовещания Щелковского информагентства вошли в число победителей шестого открытого межрегионального фестиваля-конкурса «Я люблю Россию».
+а бdsfdsvdiovdvfkfmkfmbkdflmkdflbmkldfbmklfdbmlkdfmkdflbmlkdbm.
+
+гезета "Время" от 22 декабря 2011 г.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
 	
 <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px;">В поиске важного и доброго</h1>
 <div class="container">
@@ -440,43 +463,4 @@
 
 	
 	
-function createCookie(name,value,days) {
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
-        var expires = "; expires="+date.toGMTString();
-    }
-    else var expires = "";
-    document.cookie = name+"="+value+expires+"; path=/";
-}
-function readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-function eraseCookie(name) {
-    createCookie(name,"",-1);
-}
-function myPopup() {
-    //Получаем тег A
-    var id = $('#modal');
-    //Получаем высоту и ширину окна
-    var winH = $(window).height();
-    var winW = $(window).width();
-    //Устанавливаем всплывающее окно по центру
-    id.css('top', winH/2-id.height()/2);
-    id.css('left', winW/2-id.width()/2);
-    //эффект перехода
-    id.fadeIn(500);
-}
-				  //если нажата кнопка закрытия окна
-$('.modalwindow .close').click(function (e) {
-    //отменяем поведение ссылки
-    e.preventDefault();
-    $('.modalwindow').fadeOut(500);
-});
+
