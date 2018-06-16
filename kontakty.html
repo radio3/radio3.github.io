@@ -193,14 +193,120 @@
 		
 
 		
-<div style="padding: 20px;
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Модальное окно с полосой прокрутки на CSS3 и jQuery</title>
+		<meta name="description" content="Пример работы модального окна разработанного с помощью CSS3 и jQuery" />
+		<meta name="keywords" content="modal window, overlay, модальное окно, css переходы, прокрутка, полоса прокрутки, CSS, jQuery" />
+		<meta name="author" content="Dobrovoimaster" />
+		<link rel="stylesheet" type="text/css" href="css/demopage.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/winmodal.css" type="text/css" />
+
+</head>
+<body>
+		<div class="container">
+			<!-- Верхняя навигация демо страницы -->
+			<div class="nav-top clearfix">
+				<a href="http://dbmast.ru/"><span>Dobrovoimaster</span></a>
+				<span class="right"><a href="http://dbmast.ru/modalnoe-okno-s-polosoj-prokrutki"><span><< Вернуться к уроку</span></a></span>
+			</div>
+			<header>
+				<h1>Модальное окно с полосой прокрутки<span>Пример добавления полосы прокрутки в модальное окно разработанное на CSS3 и jQuery</span></h1>
+			</header>
+			<div class="main clearfix">
+				<div class="column">
+					<p>Добавить полосу прокрутки в модальное окно очень просто. Посмотрите пример того что у нас получилось в итоге.</p>
+				</div>
+			<div class="column">
+					<a href="#?w=500" rel="popup_name" class="poplight"><button>Окно в действии - Ширина = 500px</button></a>
+<p style="text-align: left;">Все решают пару строк:
 overflow: auto;
-width: 480px;
 height: 300px;
-background-color: #ffffff;">
-Бла-бла-бла - (текст) Бла-бла-бла - (текст) Бла-бла-бла - (текст)
-Бла-бла-бла - (текст) Бла-бла-бла - (текст) Бла-бла-бла - (текст)
-</div>	
+</p>
+<!-- Lets load up prefixfree first -->
+<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+<!-- You can download it from http://leaverou.github.com/prefixfree/ -->
+				</div>
+			</div>
+		</div><!-- /container -->
+<div id="popup_name" class="popup_block"> 
+<div style="overflow: auto; height: 300px;"> 
+<img class="shadow" src="wini.jpg" style="float:left;margin:5px 10px 5px 0; " />
+<font face="Comic Sans MS"><span style="font-size: 12pt;">Медведь по лесу шлялся озабоченный,<br>
+Искал, зверюга, лёгкую еду.<br>
+Он от природы был ленивый очень<br>
+И не приучен вовсе был к труду.<br><br>
+Не сеял, не пахал и не охотился,<br>
+И даже не имел своей семьи.<br>
+И о зиме, понятно, не заботился<br>
+В компании зачуханной свиньи.<br><br>
+Свинья была глупа необычайно.<br>
+И то сказать - что можно взять с свиньи.<br>
+Вот так они бродили. И случайно <br>
+На рой пчелиный где-то набрели.<br><br>
+А пчёлы мёд по каплям собирали<br>
+И прятали в обычное дупло.<br>
+Медведь же со свиньёй давно не жрали.<br>
+А тут - медок!.. Вот гадам повезло!<br><br>
+Тут нужно рассказать, что косолапый<br>
+Имел с рожденья крохотный изъян.<br>
+Давно бы съел свинью, но...мама с папой<br>
+Вели свой род от древних мусульман.<br><br>
+Поэтому с ленивым косолапым<br>
+В лесу никто водится не хотел.<br>
+Сожрёт тебя, скотина,тихой сапой.<br>
+Ну, а свинью он есть бы не посмел.<br><br>
+Короче говоря, они дружили<br>
+Поскольку не с кем было им дружить.<br>
+А тут дупло! И спазмы сухожилий,<br>
+И мысль: "До завтра ж можно не дожить!"<br><br>
+Дупло - оно, как водится, не низко,<br>
+А пчёлы жалят - будь ты хоть медведь.<br>
+Коль к меду подберёшься очень близко,<br>
+То искусают в хлам, едрёна медь!<br><br>
+В пустой башке не много размышлений,<br>
+Но голод - лечит, мягко говоря.<br>
+Ведь с голодухи - всяк великий гений.<br>
+Будь ты медведь иль глупая свинья.<br><br>
+Голодный мозг нарисовал картину<br>
+И даже сотворил в уме чертёж.<br>
+И вот уже две глупые скотины<br>
+Зашевелилися, едрёна вошь.<br><br>
+Надули шар воздушный, цветом - синий.<br>
+Хотя откуда шарики в лесу?<br>
+Ружьё, под дуб&nbsp; с собою притащили<br>
+(Повесил кто-то пьяненький на сук).<br><br>
+Лететь решил медведь. Не в весе дело,<br>
+А в том, что на фига свинье летать?<br>
+Её удел под дубом престарелым<br>
+Вчерашний жёлудь в сумерках жевать...<br><br>
+Так пусть берёт ружьё и, залпом, сразу<br>
+Палит , зараза, изо всех стволов.<br>
+Но только в шар! И только по приказу!<br>
+Без возражений и без лишних слов!<br><br>
+И вот вознёсся шар с медведем в небо..<br>
+Атака пчёл... Сплошные волдыри...<br>
+Огузок - решетом... Повтор набега...<br>
+Истошный вопль: "Стреляй, свинья! Пали!"<br><br>
+И - залп! И - крик! И шумное паденье!<br>
+Дымок из дула свинского ружья.<br>
+Семь дыр в боку... Ведь с самого рожденья<br>
+Косой была проклятая свинья!<br><br>
+Мораль: Хоть лень и двигатель прогресса,<br>
+Но важно выбирать себе друзей<br>
+С мозгами. Родом лучше не из леса.<br>
+И только не косых. И не свиней.
+</span></font>
+</div> 
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="dm-modal.js"></script>
+</body>
+</html>
 		
 		
 <br>
